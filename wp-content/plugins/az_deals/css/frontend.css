@@ -1,0 +1,54 @@
+.xdsoft_datetimepicker .xdsoft_label i.fa-angle-down::before {
+    content: none;
+}
+
+.marker-wrap {
+    margin-bottom: 10px;
+}
+
+.marker-wrap .map{
+    height: 400px;
+}
+
+.marker-wrap input:not(.map-search){
+    display: none !important;
+}
+
+.map-marker {
+    cursor: pointer;
+}
+
+.map-marker .icon{
+    position: relative;
+}
+
+.map-marker .icon::before{
+    position: absolute;
+    content: '';
+    background-color: white;
+    border-radius: 100%;
+    left: 6px;
+    right: 6px;
+    bottom: 16px;
+    top: 4px;
+    z-index: 0;
+}
+
+.map-marker .icon .cat{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 7px;
+    z-index: 1;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -khtml-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+}
+
+
+#deals-map{
+    height: 500px;
+}
+
+

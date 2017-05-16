@@ -1,0 +1,85 @@
+@import "variables.less";
+
+.like(@color) {
+    .sl-wrapper {
+        > a {
+            border-bottom: 0;
+            text-decoration: none;    
+            color: @color;
+            &.liked {
+                color: @color;
+            }
+            &.liked:hover, &.liked:active, &.liked:focus {
+                color: @color;
+            }
+            .sl-icon {
+                margin-right: 9px !important;
+                line-height: 0;
+                display: inline-block;
+                vertical-align: top;
+                svg {
+                    fill: @color;
+                    width: 13px;
+                    height: 11px;
+                    vertical-align: middle;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left:0;
+                    }
+                }            
+            }
+            .count, .sl-count {
+                color: @color;
+                text-transform: none;
+                font-size: @font-size-small + 1px;
+                font-family: "@{google-font-family-1}";
+                color: @black-dark;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 0;
+                display: inline-block;
+                line-height: inherit;
+            }
+        }
+        > span {
+                @keyframes spin {
+                    100%{ transform: rotate(360deg); }
+                }
+
+                @-webkit-keyframes spin {
+                    100%{ transform: rotate(360deg); }
+                }
+                .loader{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin: 0;
+                    display: inline-block;
+                    margin-left: 0.3125em;
+                    text-indent: -9999em;
+                    position: relative;
+                    vertical-align: middle;
+                    &:before{
+                        content: " ";
+                        width: 80%;
+                        height: 80%;
+                        top: -2px;
+                        left: 0;
+                        position: absolute;
+                        border: 2px solid @black-dark;
+                        border-radius: 50%;
+                        border-left-color: transparent;
+                        animation: spin 575ms infinite linear;
+                    }
+                }
+
+        }
+    }    
+}
+
+
+.like(@black-dark);

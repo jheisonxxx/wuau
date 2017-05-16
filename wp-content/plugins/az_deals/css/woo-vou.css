@@ -1,0 +1,175 @@
+
+
+.woo-vou-loader {
+    display: none;
+}
+table.woo-vou-check-code {
+    padding: 10px;
+}
+.woo_vou_product_details {
+    color: #000;
+    margin-top: 15px;
+}
+.woo_vou_product_detail h2 {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 29px;
+    padding: 9px 15px 4px 0;
+    margin: 0;
+    color: #222;
+    display: block;
+}
+.woo_vou_product_details table {
+    border: medium none;
+}
+.woo_vou_product_details table th {
+    background: none repeat scroll 0 0 #f0f0f0;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 7px;
+    text-align: left;
+    vertical-align: top;
+    width: 200px;
+}
+.woo_vou_product_details table td {
+    line-height: 1.3;
+    margin-bottom: 9px;
+    padding: 15px 10px;
+    vertical-align: middle;
+}
+.woo_vou_product_details table a {
+    color: #0074a2;
+}
+.success {
+    background-color: #dff2bf;
+    color: #4f8a10;
+}
+.error {
+    background-color: #ffbaba;
+    color: #d8000c;
+}
+.success,
+.error {
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    border: 1px solid;
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+/* -------------------------------------- */
+
+.form-table.woo-vou-check-code {
+    float: left;
+    margin: 3% 2%;
+    width: 94%;
+}
+.woo_pdf_vou_main {
+    float: left;
+    width: 100%;
+}
+.woo_pdf_vou_tit,
+.woo_pdf_pro_tit {
+    float: left;
+    width: 100%;
+    background: #f0f0f0 none repeat scroll 0 0;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.woo_pdf_vou_pro_lst {
+    float: left;
+    padding: 10px;
+    width: 98.5%;
+    margin-bottom: 35px;
+}
+.woo_vou_padding {
+    padding: 0 0.5px;
+    margin: 5px 0px;
+}
+.col-2 {
+    float: left;
+    width: 49%;
+}
+.col-3 {
+    float: left;
+    width: 32.33%;
+    word-wrap: break-word;
+}
+.col-5 {
+    float: left;
+    width: 19%;
+    word-wrap: break-word;
+}
+.woo_pdf_res_order,
+.woo_pdf_res_buyer,
+.woo_pdf_res_vou {
+    display: none;
+    font-weight: bold;
+    float: left;
+    width: auto;
+}
+.woo_pdf_val {
+    float: left;
+}
+@media only screen and (min-device-width: 480px) and (max-device-width: 1024px) {
+    .woo_pdf_vou_tit {
+        display: none;
+    }
+    .woo_pdf_res_order {
+        display: block;
+        max-width: 165px;
+        width: 100%;
+        margin: 0px 10px;
+    }
+    .woo_pdf_res_buyer {
+        display: block;
+        max-width: 175px;
+        width: 100%;
+    }
+    .col-5 {
+        width: 100%;
+    }
+}
+@media only screen and (min-device-width: 480px) and (max-device-width: 639px) {
+    .woo_pdf_pro_tit {
+        display: none;
+    }
+    .woo_pdf_res_vou {
+        display: block;
+        margin: 0px 10px;
+    }
+    .col-3,
+    .col-2 {
+        width: 100%;
+    }
+}
+@media only screen and (max-device-width: 479px) {
+    .woo_pdf_vou_tit,
+    .woo_pdf_pro_tit {
+        display: none;
+    }
+    .woo_pdf_res_vou {
+        display: block;
+        width: 100%
+    }
+    .col-3,
+    .col-2 {
+        width: 100%;
+    }
+    .woo_vou_product_details {
+        font-size: 16px;
+    }
+    .woo_pdf_res_order {
+        display: block;
+        width: 100%;
+    }
+    .woo_pdf_res_buyer {
+        display: block;
+        width: 100%;
+    }
+    .col-5,
+    .col-3,
+    .col-2 {
+        width: 100%;
+    }
+}

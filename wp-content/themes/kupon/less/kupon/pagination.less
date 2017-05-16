@@ -1,0 +1,83 @@
+@import "variables.less";
+
+.loop-pagination() {
+    display: inline-block;
+    padding: 20px 0px;
+
+    span.current, span.dots, a {
+        position: relative;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        width: 30px;
+        height: 30px;
+        border: @gray-lighter 0px solid;
+        border-radius: 50%;
+        background: @white-lighter;
+        color: @black;
+        text-align: center;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 30px; 
+        font-family: Helvetica, Helvetica Neue, sans-serif;
+        box-sizing: border-box;
+        box-shadow: 0 1px 3px 0 fade(@black-darker, 12%), 0 1px 2px 0 fade(@black-darker, 24%);
+        &.current {
+            &:before {
+                box-shadow: inset 0 0 0 1px fade(@brand-color, 75%);
+                .vendor(transform, scale(1));
+            }
+            &:hover {
+                color: @black-darker;
+            }
+        }
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            box-shadow: 0 0 0 2px fade(@black-darker, 75%);
+            content: '';
+            .vendor(transition, all .25s);
+            .vendor(transform, scale(0));
+        }            
+        &:hover {
+            color: transparent !important;
+            &:before {
+                box-shadow: inset 0 0 0 4px fade(@black-darker, 75%);
+                .vendor(transform, scale(.3));
+            }
+        }
+
+        &.prev, &.next {
+            vertical-align: middle;
+            font-size: @font-size-small;
+            span {
+                display: none;
+            }
+        }
+        i {
+            font-family: 'themify';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            &.prev::before {
+                content: "\e629";
+            }
+            &.next::before {
+                content: "\e628";
+            }
+        }
+    }
+}
+
+nav.paging-navigation {
+    .loop-pagination {
+        .loop-pagination();
+    }    
+}

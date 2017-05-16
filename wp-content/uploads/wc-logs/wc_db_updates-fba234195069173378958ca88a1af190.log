@@ -1,0 +1,16 @@
+2017-05-16T15:12:51+00:00 INFO Queuing 3.0.0 - wc_update_300_webhooks
+2017-05-16T15:12:51+00:00 INFO Queuing 3.0.0 - wc_update_300_grouped_products
+2017-05-16T15:12:51+00:00 INFO Queuing 3.0.0 - wc_update_300_settings
+2017-05-16T15:12:51+00:00 INFO Queuing 3.0.0 - wc_update_300_product_visibility
+2017-05-16T15:12:51+00:00 INFO Queuing 3.0.0 - wc_update_300_db_version
+2017-05-16T15:12:51+00:00 INFO Running wc_update_300_webhooks callback
+2017-05-16T15:12:51+00:00 INFO Finished wc_update_300_webhooks callback
+2017-05-16T15:12:51+00:00 INFO Running wc_update_300_grouped_products callback
+2017-05-16T15:12:51+00:00 INFO Finished wc_update_300_grouped_products callback
+2017-05-16T15:12:51+00:00 INFO Running wc_update_300_settings callback
+2017-05-16T15:12:51+00:00 INFO Finished wc_update_300_settings callback
+2017-05-16T15:12:51+00:00 INFO Running wc_update_300_product_visibility callback
+2017-05-16T15:12:52+00:00 INFO Finished wc_update_300_product_visibility callback
+2017-05-16T15:12:52+00:00 INFO Running wc_update_300_db_version callback
+2017-05-16T15:12:52+00:00 INFO Finished wc_update_300_db_version callback
+2017-05-16T15:12:52+00:00 INFO Data update complete

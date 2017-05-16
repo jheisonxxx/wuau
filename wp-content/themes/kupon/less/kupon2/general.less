@@ -1,0 +1,163 @@
+@import "variables.less";
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+    margin: 0;
+    background-color: @white-dark;
+}
+
+html {
+    overflow-y:scroll;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @white-lighter;
+    z-index: 9999;
+    height: 100%;
+    #status {
+        background-image: url("@{template_directory_uri}/images/loader/loading-spin.svg");
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        .vendor(transform, translate(-50%, -50%));
+        width: 32px;
+        height: 32px;
+    }
+}
+
+body.error404 {
+    footer {
+        margin-top: 60px; 
+    }
+}
+
+.site-main {
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+}
+
+#content {
+    &::after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+.content-area {
+}    
+
+.page-template-default {
+    .content-area {
+        padding-top: 0;
+    }        
+}
+
+body.page-template-with-left-sidebar:not(.woocommerce-page),
+body.page-template-with-left-shop-sidebar:not(.woocommerce-page),
+body.page-template-with-right-sidebar:not(.woocommerce-page),
+body.page-template-with-right-shop-sidebar:not(.woocommerce-page),
+body.single-post {
+    .content-area {
+        box-shadow: 0 2px 3px -1px fade(@gray, 70%);
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: @white-lighter;
+    }
+}
+
+
+body.archive.woocommerce  {
+    header.page-header {
+        display: none;
+    }
+}
+
+.container  {
+    .container();
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+.container {
+    &.active-sidebar {
+        display: table;    
+        width:100%;
+        table-layout: fixed;
+        #primary {
+            width: 65%;
+            display: table-cell;
+            vertical-align: top;
+            height: 100%;     
+        }
+        #tertiary {
+            width: 35%;            
+            display: table-cell;
+            vertical-align: top;
+            height: 100%;            
+            /*margin-top: 5px;*/
+            .sidebar-inner {
+                margin-right: 30px;
+            }
+        }
+        #primary + #tertiary {
+            .sidebar-inner {
+                margin-right: 0;
+                margin-left: 30px;
+            }            
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    body.page-template-with-left-sidebar, body.page-template-with-left-shop-sidebar {
+        .container {
+            &.active-sidebar {
+                .vendor(display, flex);
+                .vendor(flex-direction, column-reverse);
+            }
+        }
+    }
+
+    .container {
+        &.active-sidebar {
+            display: block;
+            #primary {
+                width: auto;
+                display: block;
+            }
+            #tertiary {
+                width: auto;
+                display: block;
+                .sidebar-inner {
+                    margin-right: 0;
+                }
+            }
+            #primary + #tertiary {
+                .sidebar-inner {
+                    margin-right: 0;
+                    margin-left: 0;
+                }            
+            }
+        }
+    }
+}
+
+.social_connect_ui {
+    margin-bottom: 5px;
+    .comment-form-social-connect {
+        margin: 0;
+    }
+}

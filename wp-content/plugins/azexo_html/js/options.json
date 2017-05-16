@@ -1,0 +1,562 @@
+[
+    {
+        "original":
+                {
+                    "name": "Foundry",
+                    "pathToOriginal": "mixture/public/less/",
+                    "originalFileName": "theme",
+                    "colours": ["#47b475"]
+                },
+        "schemes":
+                [
+                    {
+                        "name": "Nature",
+                        "colours": ["#91A05C"]
+                    },
+                    {
+                        "name": "Nearblack",
+                        "colours": ["#13181D"]
+                    },
+                    {
+                        "name": "Navy",
+                        "colours": ["#282a38"]
+                    },
+                    {
+                        "name": "Gunmetal",
+                        "colours": ["#333347"]
+                    },
+                    {
+                        "name": "Startup",
+                        "colours": ["#5edcd0"]
+                    },
+                    {
+                        "name": "Hyperblue",
+                        "colours": ["#3b3be8"]
+                    },
+                    {
+                        "name": "Purple",
+                        "colours": ["#9037ff"]
+                    },
+                    {
+                        "name": "Red",
+                        "colours": ["#e31d3b"]
+                    },
+                    {
+                        "name": "Fire",
+                        "colours": ["#fc4f4f"]
+                    },
+                    {
+                        "name": "Orange",
+                        "colours": ["#e5692c"]
+                    },
+                    {
+                        "name": "Chipotle",
+                        "colours": ["#f9ad19"]
+                    },
+                    {
+                        "name": "OffYellow",
+                        "colours": ["#e3d820"]
+                    }
+
+                ]
+    },
+    {
+        "title": "Typography",
+        "originalSet": {
+            "setName": "Raleway",
+            "fonts": [
+                {
+                    "fontName": "Raleway"
+                }
+            ],
+            "css": [
+            ]
+        },
+        "optionalSets": [
+            {
+                "setName": "Oswald",
+                "fonts": [
+                    {
+                        "fontName": "Oswald"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Oswald:300,400,600,700"
+                ]
+            },
+            {
+                "setName": "Roboto",
+                "fonts": [
+                    {
+                        "fontName": "Roboto"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Roboto:100,300,400,600,700"
+                ]
+            },
+            {
+                "setName": "RobotoCondensed",
+                "fonts": [
+                    {
+                        "fontName": "RobotoCondensed"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Roboto+Condensed:100,300,400,700,700italic"
+                ]
+            },
+            {
+                "setName": "OpenSans",
+                "fonts": [
+                    {
+                        "fontName": "Opensans"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700"
+                ]
+            },
+            {
+                "setName": "Titillium",
+                "fonts": [
+                    {
+                        "fontName": "Titillium"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Titillium+Web:100,300,400,600,700"
+                ]
+            },
+            {
+                "setName": "Montserrat",
+                "fonts": [
+                    {
+                        "fontName": "Montserrat"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700"
+                ]
+            },
+            {
+                "setName": "Dosis",
+                "fonts": [
+                    {
+                        "fontName": "Dosis"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Dosis:100,300,400,600,700"
+                ]
+            },
+            {
+                "setName": "Poppins",
+                "fonts": [
+                    {
+                        "fontName": "Poppins"
+                    }
+                ],
+                "css": [
+                    "http://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700"
+                ]
+            }
+        ]
+    },
+    {
+        "options": [
+            {
+                "type": "toggle",
+                "class": "boxed-layout",
+                "text": "Boxed Layout",
+                "initial": "off",
+                "icon": "resize-width"
+            },
+            {
+                "type": "toggle",
+                "class": "btn-rounded",
+                "text": "Rounded Buttons",
+                "initial": "off",
+                "icon": "brush"
+            },
+            {
+                "type": "toggle",
+                "class": "scroll-assist",
+                "text": "Scroll Smoothing",
+                "initial": "off",
+                "icon": "resize-height"
+            }
+        ]
+    },
+    {
+        "options": [
+            {
+                "type": "toggle",
+                "selector": "section",
+                "menu": "utility",
+                "submenu": "Section Controls",
+                "class": "hidden-xs",
+                "text": "Hide On Mobile",
+                "initial": "auto",
+                "icon": "phone"
+            },
+            {
+                "type": "toggle",
+                "disposableSelector": ".toggle-bg-mrv",
+                "menu": "utility",
+                "submenu": "Section Controls",
+                "class": "bg-dark",
+                "text": "Dark BG",
+                "initial": "auto",
+                "icon": "contrast"
+            },
+            {
+                "type": "toggle",
+                "disposableSelector": ".toggle-bg-mrv",
+                "menu": "utility",
+                "submenu": "Section Controls",
+                "class": "bg-secondary",
+                "text": "Offset BG",
+                "initial": "auto",
+                "icon": "contrast"
+            },
+            {
+                "type": "toggle",
+                "selector": "h1,h2,h3,h4,h5,h6",
+                "menu": "context",
+                "class": "uppercase",
+                "text": "Uppercase",
+                "initial": "auto",
+                "icon": "text"
+            },
+            {
+                "type": "toggle",
+                "selector": "h1,h2,h3,h4,h5,h6",
+                "menu": "context",
+                "class": "bold",
+                "text": "Bold",
+                "initial": "auto",
+                "icon": "bold"
+            },
+            {
+                "type": "toggle",
+                "selector": "h1",
+                "menu": "context",
+                "class": "large",
+                "text": "Enlarge",
+                "initial": "auto",
+                "icon": "text"
+            },
+            {
+                "type": "toggle",
+                "selector": ".feature",
+                "menu": "context",
+                "class": "boxed",
+                "text": "Boxed",
+                "initial": "auto",
+                "icon": "brush"
+            },
+            {
+                "type": "toggle",
+                "selector": ".feature",
+                "menu": "context",
+                "class": "bordered",
+                "text": "Bordered",
+                "initial": "auto",
+                "icon": "brush"
+            },
+            {
+                "type": "toggle",
+                "selector": ".pricing-table",
+                "menu": "context",
+                "class": "boxed",
+                "text": "Boxed",
+                "initial": "auto",
+                "icon": "brush"
+            },
+            {
+                "type": "toggle",
+                "selector": ".pricing-table",
+                "menu": "context",
+                "class": "emphasis",
+                "text": "Highlight",
+                "initial": "auto",
+                "icon": "brush"
+            },
+            {
+                "type": "toggle",
+                "selector": ".image-bg, .cover, section.image-slider",
+                "menu": "utility",
+                "class": "parallax",
+                "text": "Parallax",
+                "initial": "auto",
+                "icon": "data-transfer-upload"
+            },
+            {
+                "type": "toggle",
+                "selector": ".row, div[class*='col-']",
+                "menu": "context",
+                "class": "text-center",
+                "text": "Text Center",
+                "initial": "auto",
+                "icon": "align-center"
+            },
+            {
+                "type": "toggle",
+                "selector": ".btn",
+                "menu": "context",
+                "class": "btn-filled",
+                "text": "Fill Button",
+                "initial": "auto",
+                "icon": "brush"
+            }
+        ]
+    },
+    {
+        "options": [
+            {
+                "buttonText": "Edit Placeholder",
+                "modalTitle": "Edit Placeholder",
+                "modalIntro": "Edit the placeholder text for this input. Placeholder text appears before the user has started typing.",
+                "modalInputLabel": "Placeholder Text:",
+                "selector": "input[type='text'],textarea",
+                "attribute": "placeholder",
+                "modalInputIcon": "text"
+            },
+            {
+                "buttonText": "Edit Value",
+                "modalTitle": "Edit Input Value",
+                "modalIntro": "Edit the value for this input. The value is the text that appears on the submit button.",
+                "modalInputLabel": "Button Text:",
+                "selector": "input[type='submit']",
+                "attribute": "value",
+                "modalInputIcon": "text"
+            },
+            {
+                "buttonText": "Edit Feed",
+                "modalTitle": "Edit Instagram Feed",
+                "modalIntro": "Edit the Instagram feed by placing your desired username here.",
+                "modalInputLabel": "Username:",
+                "selector": ".instafeed",
+                "attribute": "data-user-name",
+                "modalInputIcon": "instagram",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Flickr User ID",
+                "modalTitle": "Edit Flickr User ID",
+                "modalIntro": "Specify Flickr User ID for this album.",
+                "modalInputLabel": "User ID:",
+                "selector": "ul.flickr-feed",
+                "attribute": "data-user-id",
+                "modalInputIcon": "person",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Flickr Album",
+                "modalTitle": "Edit Flickr Album",
+                "modalIntro": "Specify Flickr Album ID.",
+                "modalInputLabel": "Album ID:",
+                "selector": "ul.flickr-feed",
+                "attribute": "data-album-id",
+                "modalInputIcon": "grid-three-up",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Twitter Feed",
+                "modalTitle": "Edit Twitter Feed",
+                "modalIntro": "Enter the name of any Twitter handle or username.  Do not include the @ symbol.",
+                "modalInputLabel": "Feed name:",
+                "selector": ".tweets-feed",
+                "attribute": "data-feed-name",
+                "modalInputIcon": "twitter",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Map Embed",
+                "modalTitle": "Edit Map Embed",
+                "modalIntro": "Copy the iframe embed code from your mapping provider and paste it here.",
+                "modalInputLabel": "Embed Code:",
+                "selector": ".map-holder iframe",
+                "attribute": "no-src",
+                "modalInputIcon": "map-marker",
+                "sectionControl": "true"
+            },
+            {
+                "buttonText": "Edit Media Embed",
+                "modalTitle": "Edit Media Embed",
+                "modalIntro": "Copy the iframe embed code from your media provider and paste it here.",
+                "modalInputLabel": "Embed Code:",
+                "selector": ".embed-video-container > iframe",
+                "attribute": "no-src",
+                "modalInputIcon": "video",
+                "sectionControl": "true"
+            },
+            {
+                "buttonText": "Edit Newsletter Embed",
+                "modalTitle": "Edit Newsletter Embed",
+                "modalIntro": "Copy the form code from Mailchimp or Campaign Monitor here.  Use the `Classic` form in Mailchimp. Use the standard form in Campaign Monitor.  Leaving this empty will default to email form behaviour (sent through mail.php)",
+                "modalInputLabel": "Form Embed Code:",
+                "selector": "form.form-newsletter iframe.mail-list-form",
+                "attribute": "srcdoc",
+                "modalInputIcon": "envelope-closed",
+                "sectionControl": "true"
+            },
+            {
+                "buttonText": "Edit Form Success Message",
+                "modalTitle": "Edit Form Success Message",
+                "modalIntro": "Provide a message to appear when the form is submitted successfully.",
+                "modalInputLabel": "Form Success Message:",
+                "selector": "form[data-success]",
+                "attribute": "data-success",
+                "modalInputIcon": "circle-check",
+                "sectionControl": "true"
+            },
+            {
+                "buttonText": "Edit Form Error Message",
+                "modalTitle": "Edit Form Error Message",
+                "modalIntro": "Provide a message to appear when the form validation is rejected.",
+                "modalInputLabel": "Form Error Message:",
+                "selector": "form[data-error]",
+                "attribute": "data-error",
+                "modalInputIcon": "circle-x",
+                "sectionControl": "true"
+            },
+            {
+                "buttonText": "Edit Form Redirect Address",
+                "modalTitle": "Edit Form Redirect Address",
+                "modalIntro": "The address to redirect after successful form submission.   Leave blank for no redirection.",
+                "modalInputLabel": "Redirect Address:",
+                "selector": "form.form-email, form.form-newsletter",
+                "attribute": "success-redirect",
+                "modalInputIcon": "external-link",
+                "sectionControl": "true"
+            },
+            {
+                "buttonText": "Edit Countdown Date",
+                "modalTitle": "Edit Countdown Date",
+                "modalIntro": "Date of countdown in YYYY/DD/MM format.",
+                "modalInputLabel": "Date:",
+                "selector": ".countdown",
+                "attribute": "data-date",
+                "modalInputIcon": "clock",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Progress Amount",
+                "modalTitle": "Edit Progress Amount",
+                "modalIntro": "Change the value of the progress bar (out of 100)",
+                "modalInputLabel": "Value:",
+                "selector": ".progress-bar",
+                "attribute": "data-progress",
+                "modalInputIcon": "dial",
+                "sectionControl": "false",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Project Category",
+                "modalTitle": "Edit Project Category",
+                "modalIntro": "Change the category of this project",
+                "modalInputLabel": "Category:",
+                "selector": ".project",
+                "attribute": "data-filter",
+                "modalInputIcon": "tags",
+                "sectionControl": "false",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Gallery Title",
+                "modalTitle": "Edit Gallery Title",
+                "modalIntro": "Title for Lightbox Gallery",
+                "modalInputLabel": "Gallery Title:",
+                "selector": ".lightbox-grid",
+                "attribute": "data-gallery-title",
+                "modalInputIcon": "tag",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Disqus Shortname",
+                "modalTitle": "Edit Disqus Shortname",
+                "modalIntro": "Shortname for Disqus Comments. Retrieve your site's shortname from the 'Settings' area in your Disqus dashboard. See the template documentation for greater detail.",
+                "modalInputLabel": "Shortname:",
+                "selector": ".disqus-comments",
+                "attribute": "data-shortname",
+                "modalInputIcon": "tag",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Google Maps API Key",
+                "modalTitle": "Google Maps API Key",
+                "modalIntro": "Get your Maps API key from Google and paste it here to allow styled maps in your page.",
+                "modalInputLabel": "API Key:",
+                "selector": "div.map-canvas",
+                "attribute": "data-maps-api-key",
+                "modalInputIcon": "key",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Map Address",
+                "modalTitle": "Map Address",
+                "modalIntro": "Provide a specific address for Google Maps to center the map.",
+                "modalInputLabel": "Full Address:",
+                "selector": "div.map-canvas",
+                "attribute": "data-address",
+                "modalInputIcon": "map-marker",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Map Style",
+                "modalTitle": "Map Style",
+                "modalIntro": "Copy JSON style code from https://snazzymaps.com/ or http://goo.gl/GJEDaO and paste below.",
+                "modalInputLabel": "Maps Style JSON:",
+                "selector": "div.map-canvas",
+                "attribute": "data-map-style",
+                "modalInputIcon": "brush",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Map Zoom Level",
+                "modalTitle": "Map Zoom Level",
+                "modalIntro": "Provide a zoom level (number) between 1 and 18 where 18 is closer and 1 is further away.",
+                "modalInputLabel": "Zoom level:",
+                "selector": "div.map-canvas",
+                "attribute": "data-map-zoom",
+                "modalInputIcon": "zoom-in",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Video Provider",
+                "modalTitle": "Edit Video Provider",
+                "modalIntro": "Specify either 'youtube' or 'vimeo' as your media provider",
+                "modalInputLabel": "Video Provider:",
+                "selector": "iframe[data-provider]",
+                "attribute": "data-provider",
+                "modalInputIcon": "media-play",
+                "sectionControl": "true",
+                "refresh": "true"
+            },
+            {
+                "buttonText": "Edit Video ID",
+                "modalTitle": "Edit Video ID",
+                "modalIntro": "Specify the ID of the video as obtained from the URL (see docs for a more detailed guide)",
+                "modalInputLabel": "Video ID:",
+                "selector": "iframe[data-video-id]",
+                "attribute": "data-video-id",
+                "modalInputIcon": "video",
+                "sectionControl": "true",
+                "refresh": "true"
+            }
+        ]
+    }
+]

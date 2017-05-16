@@ -1,0 +1,203 @@
+[{
+    "sidebar": ["search-3", "vc_widget-14", "vc_widget-10", "vc_widget-11", "vc_widget-12", "azexo_post-2"],
+    "header_sidebar": ["vc_widget-2"],
+    "middle_sidebar": ["vc_widget-16"],
+    "footer_sidebar": ["vc_widget-3"],
+    "dashboard_sidebar": ["azexo_dashboard_links-2"],
+    "shop": ["vc_widget-15", "azexo_woo_related_products-2", "vc_widget-8", "vc_widget-5", "woocommerce_product_categories-2", "woocommerce_product_tag_cloud-2", "vc_widget-6"]
+}, {
+    "search": {
+        "3": {
+            "title": "Search"
+        },
+        "_multiwidget": 1
+    },
+    "vc_widget": {
+        "14": {
+            "title": "Social",
+            "post": "154"
+        },
+        "10": {
+            "title": "",
+            "post": "148"
+        },
+        "11": {
+            "title": "Popular video tips",
+            "post": "152"
+        },
+        "12": {
+            "title": "Subscribe",
+            "post": "212"
+        },
+        "2": {
+            "title": "",
+            "post": "215"
+        },
+        "16": {
+            "title": "",
+            "post": "348",
+            "conditions": {
+                "action": "show",
+                "rules": [{
+                    "major": "page",
+                    "minor": "archive"
+                }]
+            }
+        },
+        "3": {
+            "title": "",
+            "post": "214"
+        },
+        "15": {
+            "title": "",
+            "post": "224",
+            "conditions": {
+                "action": "show",
+                "rules": [{
+                    "major": "page",
+                    "minor": "post_type-product"
+                }]
+            }
+        },
+        "8": {
+            "title": "Advertise",
+            "post": "73",
+            "conditions": {
+                "action": "show",
+                "rules": [{
+                    "major": "page",
+                    "minor": "archive"
+                }]
+            }
+        },
+        "5": {
+            "title": "Subscribe",
+            "post": "212",
+            "conditions": {
+                "action": "show",
+                "rules": [{
+                    "major": "page",
+                    "minor": "archive"
+                }]
+            }
+        },
+        "6": {
+            "title": "Best rated",
+            "post": "213",
+            "conditions": {
+                "action": "show",
+                "rules": [{
+                    "major": "page",
+                    "minor": "archive"
+                }, {
+                    "major": "page",
+                    "minor": "166"
+                }, {
+                    "major": "page",
+                    "minor": "68"
+                }, {
+                    "major": "page",
+                    "minor": "206"
+                }, {
+                    "major": "page",
+                    "minor": "48"
+                }, {
+                    "major": "page",
+                    "minor": "5"
+                }, {
+                    "major": "page",
+                    "minor": "6"
+                }, {
+                    "major": "page",
+                    "minor": "7"
+                }]
+            }
+        },
+        "_multiwidget": 1
+    },
+    "azexo_post": {
+        "2": {
+            "title": "Gallery",
+            "post": "142",
+            "full": "on",
+            "template": "widget_post"
+        },
+        "_multiwidget": 1
+    },
+    "azexo_dashboard_links": {
+        "2": {
+            "title": "My dashboard",
+            "visible_if_active": 0,
+            "show_on_dashboard": 0,
+            "hide_on_dashboard": 0
+        },
+        "_multiwidget": 1
+    },
+    "azexo_woo_related_products": {
+        "2": {
+            "show_on_dashboard": 0,
+            "hide_on_dashboard": 0,
+            "conditions": {
+                "action": "show",
+                "rules": [{
+                    "major": "page",
+                    "minor": "post_type-product",
+                    "has_children": false
+                }]
+            }
+        },
+        "_multiwidget": 1
+    },
+    "woocommerce_product_categories": {
+        "2": {
+            "title": "Categories",
+            "orderby": "order",
+            "dropdown": 0,
+            "count": "1",
+            "hierarchical": "1",
+            "show_children_only": 0,
+            "conditions": {
+                "action": "hide",
+                "rules": [{
+                    "major": "page",
+                    "minor": "post_type-product"
+                }]
+            }
+        },
+        "_multiwidget": 1
+    },
+    "woocommerce_product_tag_cloud": {
+        "2": {
+            "title": "Tags",
+            "conditions": {
+                "action": "show",
+                "rules": [{
+                    "major": "page",
+                    "minor": "archive"
+                }, {
+                    "major": "page",
+                    "minor": "166"
+                }, {
+                    "major": "page",
+                    "minor": "68"
+                }, {
+                    "major": "page",
+                    "minor": "206"
+                }, {
+                    "major": "page",
+                    "minor": "48"
+                }, {
+                    "major": "page",
+                    "minor": "5"
+                }, {
+                    "major": "page",
+                    "minor": "6"
+                }, {
+                    "major": "page",
+                    "minor": "7"
+                }]
+            }
+        },
+        "_multiwidget": 1
+    }
+}]

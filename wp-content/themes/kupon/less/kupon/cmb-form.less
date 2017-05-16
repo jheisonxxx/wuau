@@ -1,0 +1,237 @@
+@import "variables.less";
+
+.cmb-form {
+    .cmb-row {
+        &::after {
+            content:"";
+            display:table;
+            clear:both;
+        }
+        &:last-child {
+            margin-bottom: 20px !important;
+        }
+    }
+
+    @width3: 16px; // Appears 2 times
+    @height0: 16px; // Appears 2 times
+
+    .cmb2-media-status {
+        .img-status {
+            clear: none;
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+            position: relative;
+            width: auto;
+            img {
+                -moz-border-radius: 2px;
+                background: @white-lighter;
+                border-radius: 2px;
+                border: 1px solid @gray;
+                cursor: pointer;
+                margin: 15px 0 0 0;
+                max-width: 350px;
+                padding: 5px;
+            }
+            .cmb2-remove-file-button {
+                background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJdSURBVDjLpZP7S1NhGMf9W7YfogSJboSEUVCY8zJ31trcps6zTI9bLGJpjp1hmkGNxVz4Q6ildtXKXzJNbJRaRmrXoeWx8tJOTWptnrNryre5YCYuI3rh+8vL+/m8PA/PkwIg5X+y5mJWrxfOUBXm91QZM6UluUmthntHqplxUml2lciF6wrmdHriI0Wx3xw2hAediLwZRWRkCPzdDswaSvGqkGCfq8VEUsEyPF1O8Qu3O7A09RbRvjuIttsRbT6HHzebsDjcB4/JgFFlNv9MnkmsEszodIIY7Oaut2OJcSF68Qx8dgv8tmqEL1gQaaARtp5A+N4NzB0lMXxon/uxbI8gIYjB9HytGYuusfiPIQcN71kjgnW6VeFOkgh3XcHLvAwMSDPohOADdYQJdF1FtLMZPmslvhZJk2ahkgRvq4HHUoWHRDqTEDDl2mDkfheiDgt8pw340/EocuClCuFvboQzb0cwIZgki4KhzlaE6w0InipbVzBfqoK/qRH94i0rgokSFeO11iBkp8EdV8cfJo0yD75aE2ZNRvSJ0lZKcBXLaUYmQrCzDT6tDN5SyRqYlWeDLZAg0H4JQ+Jt6M3atNLE10VSwQsN4Z6r0CBwqzXesHmV+BeoyAUri8EyMfi2FowXS5dhd7doo2DVII0V5BAjigP89GEVAtda8b2ehodU4rNaAW+dGfzlFkyo89GTlcrHYCLpKD+V7yeeHNzLjkp24Uu1Ed6G8/F8qjqGRzlbl2H2dzjpMg1KdwsHxOlmJ7GTeZC/nesXbeZ6c9OYnuxUc3fmBuFft/Ff8xMd0s65SXIb/gAAAABJRU5ErkJggg==");
+                height: @height0;
+                left: -5px;
+                position: absolute;
+                text-indent: -9999px;
+                top: -5px;
+                top: 10px;
+                width: @width3;
+            }
+        }
+        .embed-status {
+            -moz-border-radius: 2px;
+            background: @white-lighter;
+            border-radius: 2px;
+            border: 1px solid @gray;
+            float: left;
+            margin: 15px 0 0 0;
+            max-width: 800px;
+            padding: 5px;
+            position: relative;
+            .cmb2-remove-file-button {
+                background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJdSURBVDjLpZP7S1NhGMf9W7YfogSJboSEUVCY8zJ31trcps6zTI9bLGJpjp1hmkGNxVz4Q6ildtXKXzJNbJRaRmrXoeWx8tJOTWptnrNryre5YCYuI3rh+8vL+/m8PA/PkwIg5X+y5mJWrxfOUBXm91QZM6UluUmthntHqplxUml2lciF6wrmdHriI0Wx3xw2hAediLwZRWRkCPzdDswaSvGqkGCfq8VEUsEyPF1O8Qu3O7A09RbRvjuIttsRbT6HHzebsDjcB4/JgFFlNv9MnkmsEszodIIY7Oaut2OJcSF68Qx8dgv8tmqEL1gQaaARtp5A+N4NzB0lMXxon/uxbI8gIYjB9HytGYuusfiPIQcN71kjgnW6VeFOkgh3XcHLvAwMSDPohOADdYQJdF1FtLMZPmslvhZJk2ahkgRvq4HHUoWHRDqTEDDl2mDkfheiDgt8pw340/EocuClCuFvboQzb0cwIZgki4KhzlaE6w0InipbVzBfqoK/qRH94i0rgokSFeO11iBkp8EdV8cfJo0yD75aE2ZNRvSJ0lZKcBXLaUYmQrCzDT6tDN5SyRqYlWeDLZAg0H4JQ+Jt6M3atNLE10VSwQsN4Z6r0CBwqzXesHmV+BeoyAUri8EyMfi2FowXS5dhd7doo2DVII0V5BAjigP89GEVAtda8b2ehodU4rNaAW+dGfzlFkyo89GTlcrHYCLpKD+V7yeeHNzLjkp24Uu1Ed6G8/F8qjqGRzlbl2H2dzjpMg1KdwsHxOlmJ7GTeZC/nesXbeZ6c9OYnuxUc3fmBuFft/Ff8xMd0s65SXIb/gAAAABJRU5ErkJggg==");
+                height: @height0;
+                left: -5px;
+                position: absolute;
+                text-indent: -9999px;
+                top: -5px;
+                width: @width3;
+            }
+        }
+        .file-status>span {
+            cursor: pointer;
+        }
+    }
+    .cmb-type-file-list {
+        .cmb2-media-status {
+            .img-status {
+                clear: none;
+                float: left;
+                margin-right: 10px;
+                width: auto;
+            }
+        }
+    }
+    .cmb-attach-list {
+        li {
+            clear: both;
+            display: inline-block;
+            margin-bottom: 25px;
+            width: 100%;
+            img {
+                cursor: move;
+                float: left;
+                margin-right: 10px;
+            }
+        }
+    }
+    
+    .cmb-type-taxonomy-multicheck, .cmb-type-taxonomy-multicheck-inline, .cmb-type-taxonomy-radio, .cmb-type-taxonomy-radio-inline{
+        .cmb-td {
+            > p {
+                margin-bottom: 0;
+            }
+        }
+        .cmb-multicheck-toggle {
+            cursor: pointer;
+            font-size: @font-size-base - 2px;
+            color: @gray-darker;
+            .vendor(user-select, none);
+        }
+        ul.cmb2-checkbox-list, ul.cmb2-radio-list {
+            li {
+                padding: 5px 0;
+            }            
+        }       
+        &.cmb-type-taxonomy-multicheck-inline {
+            ul.cmb2-checkbox-list {
+                .horizontal-list(~"calc(33.3333% - 0.5px)", 10px);
+                li {
+                    margin-bottom: 0;
+                }
+                @media (max-width: 768px) {
+                    li {
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }       
+        }
+        &.cmb-type-taxonomy-radio-inline {
+            ul.cmb2-radio-list {
+                .horizontal-list(~"calc(25% - 0.5px)", 10px);
+                li {
+                    margin-bottom: 0;
+                }
+                @media (max-width: 768px) {
+                    li {
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }       
+        }
+    }    
+    .cmb-type-hierarchical-taxonomy-select {
+        .cmb-td {
+            .hierarchical ~ .hierarchy-level {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .availability-calendar {
+        .ui-datepicker-calendar {
+            width: 100% !important;
+        }
+        .buttons {
+            margin-top: 0;            
+            button {
+                .button(@black, @white);
+                padding: 0;
+                width: 48%;
+                &.reserve {
+                    float: left;
+                }
+                &.dereserve {
+                    float: right;
+                }
+            }             
+        }
+    }
+    .wc-variations {
+        button {
+            &[class*="add-"] {
+                .solid-hover-button(@accent-1-color, @accent-1-color);
+                width: 100%;
+                padding: 0;
+            }
+            &[class*="remove-"] {
+                .solid-hover-button(@accent-2-color, @accent-2-color);
+                width: 100%;
+                padding: 0;
+            }
+        }
+        input, div {
+            + button {
+                &[class*="add-"], &[class*="remove-"] {
+                    margin-top: 10px;
+                }
+            }            
+        }
+        .attributes {
+            .button.add-attribute {
+            }
+            .attribute {
+                margin: 30px 0px;
+                > .wrapper {
+                    .horizontal-list(~"calc(50% - 0.5px)", 10px);
+                }                                
+                .name {
+
+                }
+                .values {
+                    > .wrapper {
+                        .horizontal-list(~"calc(50% - 0.5px)", 10px);
+                    }                                
+                    button.add-value {
+                        margin-top: 0;
+                    }
+                    div.value {
+                        margin-bottom: 10px !important;
+                        button.remove-value {
+
+                        }
+                    }
+                }
+                button.remove-attribute {
+                    margin-top: 20px;
+                }
+            }
+        }
+        .variations {
+            .variation {
+                margin: 30px 0px;
+                > label {
+                    color: @brand-color;
+                    .name {
+
+                    }
+                }
+                .price, .sale-schedule {
+                    .horizontal-list(~"calc(50% - 0.5px)", 10px);
+                    > * {
+                        margin-bottom: 10px;
+                    }
+                }
+                button.remove-variation {
+
+                }                
+            }
+        }
+    }    
+    
+}

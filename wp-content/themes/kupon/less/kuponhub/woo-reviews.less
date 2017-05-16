@@ -1,0 +1,379 @@
+@import "variables.less";
+
+#reviews {    
+    padding: @font-size-base + 13px @font-size-base + 5px;
+    background: @white-lighter;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 1px 2px @shadow-color;
+    margin-top: 30px;
+    .woocommerce-pagination{
+        padding: 0 30px 0 123px;
+        margin: 0 30px 0 123px;
+        display: inline-block;
+        box-shadow: 0 1px 2px @shadow-color;
+        padding: 0;
+        ul{
+            li{
+                a.next.page-numbers, a.prev.page-numbers{
+
+                }
+            }
+        }
+    }
+    #comments {
+        margin: 0;
+        padding: 0;
+        h2 {
+           font-size: @font-size-large + 3px;
+           font-weight: 400;
+           line-height: 28px;
+           color: @black-dark;
+           text-transform: none;
+           .vendor(transition, all 0.3s);
+           display: block;
+           padding: 0 0 @font-size-base + 13px;
+           border-bottom: 1px solid @white-dark;
+           margin: 0 -20px 20px;
+           padding: 0 20px 28px;
+       }
+       .woocommerce-noreviews {
+        margin-top: 15px;
+        padding: 0 8px;
+        }
+        
+        ol.commentlist {            
+            li {
+                .comment_container {
+                    padding: 0 30px 30px;
+                    margin: 50px 0;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 100%;                        
+                        display: block;
+                        float:left;
+                        margin-top: -8px;
+                    }
+                    .comment-text {
+                        position: relative;
+                        margin-left: 93px;    
+                        margin-top: 15px;
+                        > .like{
+                           position: absolute;
+                           top: 100%;
+                           left: 0;
+                           > span, > span > a, > span > a > .sl-icon{
+                                display: inline-block;
+                           }
+                           a{
+                             .sl-icon{
+                            width: auto;
+                            padding: 8px;
+                            border: 1px solid @brand-color;
+                            border-radius: 100%;
+                            line-height: 13px;
+                                svg{
+                                    fill: @brand-color;
+                                }
+
+                             }
+                         }
+                         .sl-count{
+                            font-family: "@{google-font-family-1}", sans-serif;
+                            letter-spacing: 0;
+                            font-size: @font-size-base - 3;
+                            font-weight: 400;
+                            line-height: 2.2;
+                            color: @black-light;
+                            padding: 3px 0;
+                        }
+                     }
+                        .meta {
+                            margin: 0;
+                            line-height: 20px;
+                            color: @gray-dark;
+                            display: inline-block;
+                            float: left;
+                            strong {
+                                color: @black-dark;
+                                font-family: "@{google-font-family-1}", sans-serif;
+                                font-weight: 500;
+                                font-style: normal;
+                                display: block;
+                                line-height: 1.1;
+                                margin-top: 1px;
+                                a {
+                                    color: @black;
+                                }
+                            }
+                            time {
+                                font-family: "@{google-font-family-1}", sans-serif;
+                                letter-spacing: 0;
+                                font-size: @font-size-base - 3;
+                                font-weight: 400;
+                                line-height: 1.7;
+                                color: @black-lighter;
+                                padding: 7px 0;
+                                position: absolute;
+                                top: 100%;
+                                right: 0;
+                            }
+                        }
+                        .description {
+                            order: 1;
+                            margin-top: 8px;
+                            padding-bottom: 18px;
+                            > p{
+                                margin: 11px 0;
+                                font-family: "@{google-font-family-1}", sans-serif;
+                                letter-spacing: 0.5px;
+                                font-size: @font-size-base;
+                                font-weight: 400;
+                                line-height: 1.7;
+                                color: @black-light;
+                            }
+                            p:last-child {
+                                margin: 0;
+                            }
+                        }
+                            .ratings {
+                            display: inline-block;
+                            margin-left: 24px;
+                            > .star-rating {
+                                overflow: hidden;
+                                position: relative;
+                                height: 1.55em;
+                                line-height: 1.55;
+                                font-size: @font-size-base - 1;
+                                width: 6em;
+                                font-family: FontAwesome;
+                                vertical-align: middle;
+                                &::before{
+                                    content: "\f005\00A0\f005\00A0\f005\00A0\f005\00A0\f005";
+                                    color: @gray-lighter;
+                                    float: left;
+                                    top: 0;
+                                    left: 0;
+                                    position: absolute;
+
+                                }
+                                span {
+                                    overflow: hidden;
+                                    float: left;
+                                    top: 0;
+                                    left: 0;
+                                    position: absolute;
+                                    padding-top: 1.5em;
+                                    &::before{
+                                        content: "\f005\00A0\f005\00A0\f005\00A0\f005\00A0\f005";
+                                        top: 0;
+                                        position: absolute;
+                                        left: 0;
+                                        color: @star-rating-color;
+                                    }
+                                    strong {
+                                    }
+                                }
+                            }
+                            .marks {
+                                display: table-cell;
+                                vertical-align: top;
+                                width: 75%;
+                                .star-rating {
+                                    position: relative;
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        top: ~"calc(50% - 2px)";
+                                        border-top: 2px dotted @gray;
+                                    }
+                                    label {
+                                        position: relative;
+                                        background-color: @white-lighter;
+                                        margin: 0;
+                                        font-weight: 300;
+                                        padding-right: @font-size-base;
+                                        color: @black;
+                                        font-size: @font-size-base;
+                                        letter-spacing: 0;
+                                        text-transform: none;
+                                    }
+                                    span {
+                                        padding-left: @font-size-base;
+                                        position: relative;
+                                        background-color: @white-lighter;
+                                        float: right;
+                                        display: inline-block;
+                                        width: auto !important;
+                                        font-size: 0;
+                                        line-height: @font-size-base * 1.8;
+                                        height: @font-size-base * 1.8;
+                                        strong {
+                                            font-size: @font-size-base;
+                                            display: inline-block;
+                                            line-height: @font-size-base * 1.8;
+                                            font-weight: 300;
+                                            color: @brand-color;
+                                            &::after {
+                                                content: ".0";
+                                            }                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &::after {
+                        content:"";
+                        display:table;
+                        clear:both;
+                    }
+                }
+                &:last-child{
+                    .comment_container{
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+        }
+    }
+    #review_form_wrapper {
+        padding: 5px 8px 0;
+        #review_form {
+            label {
+                margin-bottom: 0;
+                font-weight: 400;
+                font-size: @font-size-base - 1px;
+                text-transform: capitalize;
+            }
+            #reply-title {
+                font-size: @font-size-large - 2;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 0px 15px;
+
+                color: @black-darker;
+                line-height: 26px;
+            }
+            #commentform {
+                position: relative;
+                overflow: hidden;
+                .comment-form-author {
+                    float: left;
+                    width: 50%;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+                }
+                .comment-form-email {
+                    float: left;
+                    width: 50%;
+                    padding-left: 10px;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+                }
+                .comment-form-rating {
+                    > label{
+                        float: left;
+                        margin-right: 10px;
+                        + p.stars{
+                            float: left;
+                        }
+                    }
+                    &:after{
+                        content: " ";
+                        display: table;
+                        clear: both;
+                    }
+                }
+                .comment-form-rating, .comment-form-mark, .comment-form-comment {
+                    width: 100%;
+                }
+                .comment-form-rating, .comment-form-mark {
+                    margin: 0 0 3px 0;
+                    .stars {
+                        margin: 0;
+                        span {
+                            a {
+                                display: inline-block;
+                                font-weight: 700;
+                                margin-right: 20px;
+                                text-indent: -9999px;
+                                position: relative;
+                                border-bottom: 0!important;
+                                outline: 0;
+                                border: none;
+                                font-family: FontAwesome;
+                                color: @gray-lighter;
+                                &.star-1, &.star-2, &.star-3, &.star-4, &.star-5{
+                                    &::after {
+                                        text-indent: 0;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                    }                                
+                                    &.active::after {
+                                        color: @brand-color;
+                                    }
+                                }                              
+                                &.star-1 {
+                                    width: 1em;
+                                    &::after {
+                                        content: "\f005";
+                                    }
+                                }
+                                &.star-2 {
+                                    width: 2.3em;
+                                    &::after {
+                                        content: "\f005\00A0\f005";
+                                    }
+                                }
+                                &.star-3 {
+                                    width: 3.6em;
+                                    &::after {
+                                        content: "\f005\00A0\f005\00A0\f005";
+                                    }
+                                }
+                                &.star-4 {
+                                    width: 4.9em;
+                                    &::after {
+                                        content: "\f005\00A0\f005\00A0\f005\00A0\f005";
+                                    }
+                                }
+                                &.star-5 {
+                                    width: 5.2em;
+                                    &::after {
+                                        content: "\f005\00A0\f005\00A0\f005\00A0\f005\00A0\f005";
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+                .comment-form-comment {
+                    margin-top: 9px;
+                    margin-bottom: 0;
+                }
+                .form-submit {     
+                    margin: 20px 0 0 0;
+                    #submit {
+                        .button(@white-lighter, @brand-color);
+                    }                
+                }
+            }
+            .social_connect_ui  {
+                .comment-form-social-connect {
+                    margin: 0;
+                }
+            }        
+        }
+    }
+    .woocommerce-verification-required {
+        padding: 15px 30px;
+    }   
+}
+

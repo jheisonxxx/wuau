@@ -1,0 +1,454 @@
+@import "variables.less";
+
+
+#quaternary {
+    p i {
+        margin: 0 5px 0 5px;
+        color: @accent-1-color;
+        font-size: 13px;
+    }
+}
+
+.social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+    li {
+        display: inline-block;
+        margin-right: 6px !important;
+        font-size: 14px;
+        a {
+            i {
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                line-height: 40px;
+                -webkit-transition: all .2s;
+                transition: all .2s;
+            }            
+        }
+    }
+    .social-btn.social-twitter i {
+        border: 1px solid #00aced;
+        color: #00aced;
+    }
+    .social-btn.social-twitter i:hover {
+        background-color: #00aced;
+        color: #fff
+    }
+    .social-btn.social-google i {
+        border: 1px solid #dd4b39;
+        color: #dd4b39;
+    }
+    .social-btn.social-google i:hover {
+        background-color: #dd4b39;
+        color: #fff;
+    }
+    .social-btn.social-linkedin i {
+        border: 1px solid #0976b4;
+        color: #0976b4;
+    }
+    .social-btn.social-linkedin i:hover {
+        background-color: #0976b4;
+        color: #fff
+    }
+    .social-btn.social-facebook i {
+        border: 1px solid #3b5999;
+        color: #3b5999;
+    }
+    .social-btn.social-facebook i:hover {
+        background-color: #3b5999;
+        color: #fff
+    }
+}
+
+.wp-editor-container {
+    border: 1px solid @white-darker;
+}
+
+#deal-form {
+    .error {
+        color: @accent-1-color;
+        margin-left: 10px;
+    }
+    .deal-images-wrap {
+        .deal-image-wrap {
+            position: relative;
+            display: inline-block;
+            margin: 0 10px 10px 0;
+            line-height: 1;
+            .remove-deal-image {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+#deal-wizard {
+    ul.ui-tabs-nav {
+        margin: 10px 0 50px;
+        li {
+            margin: 0 1px;
+            padding: 0;
+            display: inline-block;
+            &::before {
+                content: none;
+            }
+            &.ui-tabs-active {
+                a {
+                    background-color: @accent-2-color;
+                    color: @white-lighter;
+                }
+            }
+            a {
+                .button(@black, @white-lighter);
+                font-size: 14px;
+                padding: 10px 14px;               
+                line-height: 1.1;
+            }        
+        }
+    }
+    #deal-wizard-navigation {
+        text-align: right;
+        .deal-submit {
+            .button(@white-lighter, @brand-color);
+        }
+        .deal-prev {
+            .button(@white-lighter, @accent-1-color);
+        }
+        .deal-next {
+            .button(@white-lighter, @accent-2-color);
+        }        
+        .deal-submit, .deal-prev, .deal-next {            
+            font-size: 14px;
+            padding: 10px 14px;
+            line-height: 1.5;
+        }
+    }
+}
+
+#deal-toolbar {
+    margin-bottom: 20px;
+    a {
+        color: @accent-2-color;
+    }
+}
+
+#deal-map {
+    height: 400px;
+    img {
+        max-width:none;
+    }
+}
+
+form[name="add_comment"] {
+    textarea[name="comment_text"] {
+        width: 100% !important;
+    }
+}
+
+.deal-searchform {
+    .searchform-wrapper {
+        margin:  0 -15px;
+        > * {
+            float: left;           
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .s-wrapper {
+            width: 33.33333333%;
+        }
+        .product-cat-wrapper {
+            width: 25%;
+        }
+        .location-wrapper {
+            width: 25%;
+        }
+        .submit {
+            width: 16.66666667%;
+            input {
+                .button(@white-lighter, @brand-color);
+                padding: 14px;
+                font-size: 14px;
+                line-height: 1.1;
+                display: block;
+                width: 100%;
+            }
+        }
+        &::after {
+            content:"";
+            display:table;
+            clear:both;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .deal-searchform {
+        .searchform-wrapper {
+            display: block;
+            margin:  0;
+            > * {
+                float: none;
+                width: 100% !important;
+                padding: 0;
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+
+#pv_seller_info_container, #pv_shop_description_container {
+    margin-bottom: 30px;
+    p:first-child {
+        margin: 0;
+    }
+}
+
+table.woo-vou-check-code {
+    margin: 0 !important;
+    th {
+        vertical-align: top;
+    }
+    td {
+        text-align: center !important;
+        width: 80%;
+        box-sizing: border-box;
+    }
+    .woo-vou-check-voucher-code-loader, .woo-vou-voucher-code-submit-loader {
+        display: inline;
+    }
+    .woo-vou-loader {
+        display: none;
+    }
+    .woo-vou-voucher-code-submit-wrap {
+        display: none;
+    }
+    #woo_vou_check_voucher_code {
+        display: block;
+        margin: auto;
+        margin-top: 8px;
+    }
+    .woo-vou-voucher-code-msg {
+        margin-top: 8px;
+        &.woo-vou-voucher-code-success {
+            color: @brand-color;
+        }
+    }
+    .woo_vou_product_details {
+        text-align: left;
+        color: @black-lighter;
+        h2 {
+            font-size: 17px;
+        }        
+    }
+}
+
+@media (max-width: 768px) {
+    table.woo-vou-check-code {      
+        > tbody {
+            > tr {
+                > th, > td {
+                    display: block;
+                    width: 100%;
+                    border: none !important;
+                }
+            }
+        }
+    }
+}
+
+.cmb-form {
+    .cmb2-wrap {
+        ul.ui-tabs-nav {
+            margin: 10px 0 30px;
+            li {
+                margin: 0 5px 5px 0;
+                padding: 0;
+                display: inline-block;
+                &::before {
+                    content: none;
+                }
+                &.ui-tabs-active {
+                    a {
+                        .button(@white-lighter, @accent-2-color);
+                    }
+                }
+                a {
+                    .button(@black, @white-lighter);
+                    font-size: 14px;
+                    padding: 10px 14px;               
+                    line-height: 1.1;
+                }        
+                p {
+                    display: none;
+                }
+            }
+        }
+        .validation-error {
+            color: @accent-1-color;
+        }        
+        label {
+            font-weight: 600;
+        }
+    }
+    > .buttons {
+        text-align: right;
+        [type="submit"] {
+            .button(@white-lighter, @brand-color);
+        }
+        .prev {
+            .button(@white-lighter, @accent-1-color);
+        }
+        .next {
+            .button(@white-lighter, @accent-2-color);
+        }        
+        [type="submit"], .prev, .next {            
+            font-size: 14px;
+            padding: 10px 14px;
+            line-height: 1.5;
+            margin-left: 5px;
+        }
+    }
+}
+
+.azqf-query-form {
+    > .wrapper {
+        margin:  0 -15px;
+        > * {
+            float: left;           
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .s-wrapper {
+            width: 33.33333333%;
+        }
+        .product_cat-wrapper {
+            width: 25%;
+        }
+        .location-wrapper {
+            width: 25%;
+        }
+        .submit {
+            width: 16.66666667%;
+            input {
+                .button(@white-lighter, @brand-color);
+                padding: 14px;
+                font-size: 14px;
+                line-height: 1.1;
+                display: block;
+                width: 100%;
+            }
+        }
+        &::after {
+            content:"";
+            display:table;
+            clear:both;
+        }
+        @media (max-width: 768px) {
+            display: block;
+            margin:  0;
+            > * {
+                float: none;
+                width: 100% !important;
+                padding: 0;
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+.azl-map-wrapper {
+    z-index: 1;
+    &.single {        
+        .controls {
+            top: 5px;
+            padding: 0 5px;
+            box-sizing: border-box;             
+        }
+        .azl-map {
+            max-height: 300px;
+        }
+    }
+    .controls {
+        pointer-events: none;
+        top: 50px;
+        left: 50%;        
+        width: 100%;
+        .container-width();
+        .vendor(transform, translate(-50%, 0));
+        z-index: 1;
+        @media (max-width: 768px) {
+            padding: 0 15px;
+            box-sizing: border-box; 
+        }
+        > div, > a {
+            pointer-events: all;
+            cursor: pointer;
+            padding: 7px;
+            margin-bottom: 5px;
+            line-height: 1;
+            display: table;
+            color: @black;
+            font-size: @font-size-base;
+            background-color: @white-lighter;
+            .vendor(transition, all .3s);
+            .vendor(box-shadow, 0px 2px 2px fade(@black-darker, 10%));
+            &:hover {
+                color: @brand-color;
+            }
+            &::after {
+                font-family: FontAwesome;
+            }
+        }
+        .toggle {
+            display: none;
+        }
+        .zoom-in {
+            &::after {
+                content: "\f00e";
+            }
+        }
+        .zoom-out {
+            &::after {
+                content: "\f010";
+            }
+        }
+        .fullscreen {
+            &::after {
+                content: "\f0b2";
+            }
+        }
+        .locate {
+            font-size: @font-size-base + 1px;
+            &::after {
+                content: "\f05b";
+            }
+        }
+        .directions {
+            &::after {
+                content: "\f0a4";
+            }            
+        }
+    }
+    .azl-map {
+        &.fullscreen {
+            position: fixed !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }    
+}
+
+.azv-voucher-check {
+    p.submit {
+        input {
+            margin-right: 5px;
+        }
+    }
+}

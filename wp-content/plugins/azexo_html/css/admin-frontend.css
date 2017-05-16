@@ -1,0 +1,853 @@
+.azh-editor-toolbar,
+.azh-modal,
+.azh-context-menu, 
+.azh-section-controls, 
+.azh-element-controls, 
+.ui-autocomplete,
+#azexo-html-library {
+    font-family: sans-serif;
+    letter-spacing: 0;
+    line-height: 1.5;    
+    font-size: 14px;    
+    font-weight: 400;
+    color: black;
+    box-sizing: border-box;
+}
+
+.azh-modal a, .azh-modal a:hover,
+.azh-context-menu a, .azh-context-menu a:hover, 
+.azh-section-controls a, .azh-section-controls a:hover, 
+.azh-element-controls a, .azh-element-controls a:hover, 
+#azexo-html-library .azh-builder a, #azexo-html-library .azh-builder a:hover {
+    color: blueviolet;
+    text-decoration: none;
+    font-family: sans-serif;
+    letter-spacing: 0;
+    line-height: 1.5;    
+    font-size: 14px;    
+    font-weight: 400;
+}
+
+.azh-modal label {
+    color: gray !important;
+    font-weight: 400 !important;
+    display: block !important;
+    line-height: 30px !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+.azh-modal p {
+    margin: 0 0 10px 0 !important;
+}
+
+.azh-modal em {
+    color: lightgray !important;
+}
+
+.azh-editor-toolbar select,
+.azh-modal select,
+#azexo-html-library select,
+.azh-control input:not([type="checkbox"]):not([type="radio"]),
+.azh-control select,
+.azh-modal-control {
+    color: black !important;
+    display: block !important;
+    font-family: sans-serif !important;
+    border-radius: 0 !important;
+    background: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: 1px solid lightgray !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 14px !important;
+    padding: 0 10px !important;
+    margin: 0px 0px 10px 0px !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+    vertical-align: middle !important;
+}
+
+#azexo-html-library select:placeholder, 
+#azexo-html-library select::placeholder 
+#azexo-html-library select::-webkit-input-placeholder,
+#azexo-html-library select::-moz-placeholder,
+#azexo-html-library select:-moz-placeholder,
+#azexo-html-library select:-ms-input-placeholder,
+.azh-modal-control:placeholder, 
+.azh-modal-control::placeholder 
+.azh-modal-control::-webkit-input-placeholder,
+.azh-modal-control::-moz-placeholder,
+.azh-modal-control:-moz-placeholder,
+.azh-modal-control:-ms-input-placeholder {
+    color: lightgray !important;
+    line-height: 40px !important;
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+}
+
+
+.azh-control:not(.azh-toggle) label {
+    color: gray !important;
+    font-weight: 400 !important;
+    display: block !important;
+    line-height: 30px !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+.azh-toggle label {
+    font-weight: 400 !important;
+    color: black !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+
+.azh-editor-toolbar select, .azh-editor-toolbar input {
+    display: inline-block !important;
+    width: auto  !important;
+    margin: 0 3px !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    cursor: pointer;
+    line-height: 24px !important;
+    height: 24px !important;
+    vertical-align: middle !important;
+    min-width: 50px !important;
+    color: black !important;
+    background: none !important;
+    border: 1px solid lightgray !important;
+}
+
+
+
+.azh-control.azh-color input[type="number"], .azh-control.azh-color input[type="color"] {    
+    width: 50% !important;
+    display: inline-block !important;
+    margin: 0px 0px 10px 0px !important;
+    height: 30px !important;    
+    border-radius: 0 !important;
+}
+.azh-control.azh-color input[type="color"] {
+    padding: 0 !important;
+}
+
+
+
+
+
+.azh-context-menu {
+    position: fixed;
+    min-width: 150px;
+    z-index: 100000;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 2px 5px 0 rgba(0,0,0,0.26);
+    white-space: nowrap;
+    height: auto !important;
+}
+
+.azh-context-menu > div {
+    cursor: pointer;
+    text-align: left;
+    padding: 0 16px;
+    min-height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid lightgray;
+}
+.azh-context-menu > div:last-child {
+    border-bottom: none;
+}
+.azh-context-menu > div:hover:not(.azh-context-menu-title) {
+    color: blueviolet;    
+}
+
+.azh-button {
+    cursor: pointer;
+}
+
+.azh-control input, .azh-control select {
+    display: inline-block !important;
+}
+
+
+.azh-control.azh-image {
+    text-align: center;    
+}
+
+.azh-control.azh-image img{
+    max-height: 100px;
+    max-width: 100%;
+    cursor: pointer;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+
+
+.azh-toggle {
+    margin-bottom: 5px;
+}
+
+.azh-context-menu > .azh-context-menu-title {
+    background-color: blueviolet;
+    color: white;
+    cursor: move;
+    font-weight: bold;
+}
+
+
+#simplemodal-overlay {
+    opacity: .4 !important;
+}
+
+#simplemodal-container {
+}
+
+[contenteditable]:hover {
+    outline: 1px solid rgba(0,0,0,0.15) !important;
+}
+
+.azh-modal {
+    color: black;
+    background-color: white;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+}
+
+.azh-modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.azh-modal-desc {
+    margin-bottom: 20px;
+}
+
+.azh-modal-label {
+    font-size: 13px;
+    color: gray;
+    position: relative;
+}
+
+.azh-modal-label:after {
+    content: ':';
+}
+
+.azh-modal-actions {
+    margin-top: 30px;
+}
+.azh-modal-actions > div{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: blueviolet;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+[draggable="true"] {
+    cursor: move !important;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+[contenteditable="true"] {
+    cursor: text !important;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.azh-over {
+    outline: 2px dashed blueviolet !important;
+}
+
+.azh-section-controls, .azh-element-controls, .azh-item-controls, .azh-cloneable-controls {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 2px 5px 0 rgba(0,0,0,0.26);
+    z-index: 100000;
+    line-height: 1;
+}
+
+.azh-section-controls > div:not(.azh-utility-wrapper),
+.azh-element-controls > div:not(.azh-utility-wrapper),
+.azh-item-controls > div:not(.azh-utility-wrapper),
+.azh-utility-wrapper::before {
+    font-family: dashicons;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 20px;    
+    cursor: pointer;
+}
+
+.azh-element-controls > div:not(.azh-utility-wrapper), 
+.azh-element-controls > .azh-utility-wrapper::before {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.azh-cloneable-controls > div:not(.azh-utility-wrapper) {
+    font-family: dashicons;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 15px;    
+    cursor: pointer;    
+}
+
+
+.azh-utility-wrapper {
+    position: relative;
+    white-space: nowrap;
+    float: right;
+}
+
+.azh-utility-wrapper::before {
+    content: "\f111";
+}
+
+.azh-utility-wrapper .azh-utility {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 2px 5px 0 rgba(0,0,0,0.26);
+    padding: 10px;
+    min-width: 150px;
+}
+
+.azh-utility-wrapper:hover .azh-utility {
+    display: block;
+}
+
+.azh-element-controls .azh-utility-wrapper {
+    float: left;
+}
+
+.azh-element-controls .azh-utility-wrapper .azh-utility {
+    right: auto;    
+    left: 0;
+}
+
+.azh-utility > :last-child {
+    margin-bottom: 0;
+}
+
+.azh-add-element::before {
+    content: "\f502";
+}
+
+.azh-remove-element::before {
+    content: "\f218";
+}
+
+[data-element=" "], [data-element=""] {
+    cursor: pointer !important;
+    height: 45px !important;
+    box-sizing: border-box !important;
+    background-image: 
+        -webkit-repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px) !important;
+    background-image: 
+        repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px) !important;
+}
+
+/* library sidebar */
+
+#azexo-html-library {
+    width: 45px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: all .5s ease;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+    z-index: 9999999;    
+}
+
+.azh-library-actions {
+    width: 45px;
+    overflow: hidden;
+    background-color: white;
+    height: 100%;
+    line-height: 45px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 99;
+}
+
+.azh-library-actions > * {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    opacity: .6;
+    font-family: dashicons;    
+    color: black;
+    text-decoration: none;
+    letter-spacing: 0;
+    font-weight: 400;  
+    display: block;
+}
+
+.azh-library-actions > *.azh-active {
+    background-color: whitesmoke;
+}
+
+.azh-library-actions > *:hover, .azh-library-actions > *.azh-active {
+    opacity: 1;
+}
+
+.azh-library-actions .azh-builder::before {
+    content: "\f164";    
+}
+.azh-library-actions .azh-general::before {
+    content: "\f333";    
+}
+.azh-library-actions .azh-save::before {
+    content: "\f317";    
+}
+.azh-library-actions .azh-live::before {
+    content: "\f319";
+}
+.azh-library-actions .azh-style::before {
+    content: "\f100";
+}
+
+
+#azexo-html-library > :not(.azh-library-actions) {
+    background-color: white;
+    height: 100%;
+    position: absolute;
+    margin-left: 45px;
+    overflow: hidden;
+    width: 288px;
+    top: 0;
+    transition: all .3s ease;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transform: translateX(-288px);
+    opacity: 0;
+}
+
+
+#azexo-html-library:hover > .azh-active {
+    transform: translateX(0px);
+    opacity: 1;    
+}
+
+
+
+/* library content */
+
+.azh-structure {
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+
+.azh-library {
+    padding-right: 5px;
+    margin-top: 10px;    
+}
+
+.azh-library .azh-elements {
+    display: none;
+}
+
+.azh-library-filters, .azh-elements-filters {
+    display: flex;
+}
+
+.azh-library-filters select, .azh-elements-filters select {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.azh-add-section {
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+}
+
+.azh-actions {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.azh-actions a {
+    margin-right: 3px;
+    font-size: 12px;
+    color: lightgray;
+}
+
+.azh-actions a:last-child {
+    margin-right: 0;
+}
+
+.azh-structure .azh-section-path {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: whitesmoke; 
+    cursor: move;
+    position: relative;
+}
+
+.azh-section-path .azh-remove {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.azh-section-path .azh-remove::after {
+    font-family: dashicons;
+    content: "\f182";
+}
+
+.azh-sections {
+    margin-top: 10px; 
+    padding-right: 10px; 
+    overflow-y: scroll;
+}
+
+.azh-sections .azh-section.azh-fuzzy {
+    background-image: none !important;
+}
+
+.azh-sections .azh-section {
+    cursor: pointer;
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.azh-sections .azh-section.no-image {
+    font-size: 20px;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.azh-sections .azh-section:not(.no-image) {
+    margin-top: 30px;
+    position: relative;
+}
+.azh-sections .azh-section:not(.no-image) div {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    bottom: 100%;   
+    left: 0;
+    right: 0;
+    background: blueviolet;
+    line-height: 20px;
+    color: white;
+}
+
+.azh-overlay {
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.azh-placeholder {
+    background-image: 
+        -webkit-repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px) !important;
+    background-image: 
+        repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px) !important;
+}
+
+
+
+/* add element */
+
+.azh-elements-form .azh-element {
+    display: inline-block;
+    width: calc(20% - 10px);
+    vertical-align: top;
+    min-height: 100px;
+    margin: 30px 5px 0 5px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 10px solid whitesmoke;
+    cursor: pointer;
+    position: relative;
+}
+
+.azh-elements-form .azh-element div {
+    margin: 0 0 5px 0;
+}
+
+.azh-elements-form .azh-element.no-image {
+}
+
+.azh-elements-form .azh-element:not(.no-image) {
+}
+
+.azh-elements-form .azh-element:not(.no-image) div {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: -10px;
+    right: -10px;
+    margin: 0;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+    background: blueviolet;
+    color: white;
+}
+
+
+.azh-elements-filters {
+    margin-bottom: 10px;
+}
+
+/* general sections */
+
+.azh-general .azh-section {
+    display: block;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50px;
+    min-width: 100px;
+    margin: 0 5px 40px 5px;
+    position: relative;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.azh-general .azh-section:hover div {
+    background-color: whitesmoke;
+}
+
+.azh-general .azh-section div {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+    font-size: 10px;
+    line-height: 15px;
+    position: absolute;
+    top:100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.azh-section-paste {
+    font-family: dashicons;
+    color: #aaa;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    display: inline-block;
+    min-height: 70px;
+    min-width: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+}
+.azh-section-paste:hover {
+    background-color: whitesmoke;
+}
+.azh-section-paste::after {
+    content: "\f346";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.azh-elements-form {
+    width: 800px;
+}
+
+.azh-tabs > div:first-child {    
+    margin-bottom: -1px;
+    z-index: 1;
+    position: relative;    
+}
+
+.azh-tabs > div:first-child span {
+    margin-right: -1px;
+    background-color: white;     
+    border: 1px solid lightgray;
+    display: inline-block;    
+}
+
+.azh-tabs > div:first-child span a {
+    display: inline-block;    
+    line-height: 45px;
+    padding: 0 20px;
+}
+
+.azh-tabs > div:first-child span.azh-active {
+    border-bottom: 1px solid white;
+}
+
+.azh-tabs > div:last-child {
+    border: 1px solid lightgray;
+    padding: 10px 10px 15px 10px;
+}
+
+.azh-tabs .azh-elements-filters {
+    padding: 15px 5px 0 5px;
+}
+
+.azh-elements-list {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.azh-width-resizer {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: dashicons;
+    cursor: ew-resize;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    transform: translate(50%, 0);
+    z-index: 1;
+}
+
+.azh-width-resizer::after {
+    content: "\f229";
+}
+
+.azh-edit-tags::before {
+    content: "\f524";
+}
+
+
+.azh-editor-toolbar {  
+    position: absolute;
+    z-index: 9999999;  
+    display: inline-block;  
+    background-color: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+.azh-editor-toolbar > span { 
+    padding: 2px 5px;
+    margin: 0 3px;
+    cursor: pointer;
+    vertical-align: middle;
+    box-sizing: content-box;
+}
+.azh-editor-toolbar .azh-active { 
+    background-color: blueviolet;
+    color: white;
+}
+
+
+.azh-gmap-location::before {
+    content: "\f231";
+}
+
+
+.azh-shortcode {
+    position: absolute;
+    color: white;
+    font-family: dashicons;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: blueviolet;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 9999998;
+}
+
+.azh-shortcode::after {
+    content: "\f108";
+}
+
+.ui-autocomplete { 
+    position: absolute; 
+    cursor: default; 
+    z-index: 1003;
+    background-color: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.ui-autocomplete div {
+    font-weight: bold;
+}
+
+.ui-autocomplete li {
+    cursor: pointer; 
+}
+
+.ui-helper-hidden-accessible {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+    word-wrap: normal !important;
+}

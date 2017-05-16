@@ -1,0 +1,88 @@
+/*
+Theme Name: Kupon
+Theme URI: http://www.azexo.com/kupon
+Version: 1.24
+Author: AZEXO
+Author URI: http://www.azexo.com
+Text Domain: AZEXO
+Description: Responsive Daily Deals Theme
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
+/*------------------------------------------------------------------
+
+CONTENTS
+All less files compiled automatically via WP Less library
+
+1. less/kupon/variables.less - less variables
+2. less/kupon/general.less - main layout
+3. less/kupon/typography.less - typography and base HTML/WP tags
+4. less/kupon/comments.less - WP comments
+5. less/kupon/post.less - WP post
+6. less/kupon/header.less - WP header
+7. less/kupon/menu.less - WP site menu
+8. less/kupon/pagination.less - WP pagination
+9. less/kupon/sidebar.less - WP sidebars
+10. less/kupon/widgets.less - WP widgets
+11. less/kupon/archive.less - WP archive page title
+12. less/kupon/templates.less - various post templates
+13. less/kupon/helpers.less - reusable classes
+14. less/kupon/visual-composer.less - visual composer shortcodes
+15. less/kupon/like.less - post like feature
+16. less/kupon/content.less - styles to use it inside post content
+17. less/kupon/woo-cart.less - WooCommerce cart page
+18. less/kupon/woo-checkout.less - WooCommerce checkout page
+19. less/kupon/woocommerce.less - WooCommerce general styles
+20. less/kupon/woo-product.less - WooCommerce single product page
+21. less/kupon/woo-reviews.less - WooCommerce reviews
+22. less/kupon/woo-templates.less - WooCommerce product templates
+23. less/kupon/woo-widgets.less - WooCommerce widgets
+
+-------------------------------------------------------------------*/
+
+.sticky {    
+}
+.wp-caption { 
+}
+.wp-caption .wp-caption-text { 
+}
+.wp-caption img { 
+}
+.gallery-caption { 
+}
+.bypostauthor {
+}
+.alignleft {
+}
+.alignright {
+}
+.aligncenter {
+}
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}

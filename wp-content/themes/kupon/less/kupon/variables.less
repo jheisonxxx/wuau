@@ -1,0 +1,426 @@
+//@brand-color
+//@accent-1-color
+//@accent-2-color
+
+@white-darker:            #e8eaed;
+@white-dark:              #f2f5f7;
+@white:                   #f7f8fa;
+@white-light:             #f8fafc;
+@white-lighter:           #fff;
+@white-transparent:       rgba(255,255,255,0.9);
+
+
+@gray-darker:            #959799;
+@gray-dark:              #aaacae;
+@gray:                   #babcbe;
+@gray-light:             #caccce;
+@gray-lighter:           #dadcde;
+
+
+@black-darker:            #000;
+@black-dark:              #0c1113;
+@black:                   #272630;
+@black-light:             #626670;
+@black-lighter:           #7D8693;
+
+
+@font-size-small:         14px;
+@font-size-base:          15px;
+@font-size-large:         20px;
+
+
+@menu-height:   78px;
+@menu-item-v-padding:   8px;
+@menu-item-h-padding: 18px;
+
+
+// 2009 flexbox syntax https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/
+.vendor(@property, @value) when (@property = display) and (@value = flex) {
+    display: -webkit-box;
+}
+.vendor(@property, @value) when (@property = display) and (@value = inline-flex) {
+    display: -webkit-inline-box;
+}
+.vendor(@property, @value) when (@property = align-items)  {
+    -webkit-box-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {
+    -webkit-box-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) {
+    -webkit-box-align: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content)  {
+    -webkit-box-pack: @value;
+    -moz-box-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-start)  {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-end)  {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-between)  {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;    
+}
+
+.vendor(@property, @value) when (@property = order) {
+    -webkit-box-ordinal-group: @value + 1;
+    -moz-box-ordinal-group: @value + 1;
+    -ms-box-ordinal-group: @value + 1;
+    -o-box-ordinal-group: @value + 1;
+    box-ordinal-group: @value + 1;    
+}
+
+.vendor(@property, @value) when (@property = flex-direction) and (@value = row)  {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;   
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = row-reverse)  {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = column)  {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = column-reverse)  {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = wrap) {
+    -webkit-lines: multiple;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-box-lines: multiple;
+    -o-box-lines: multiple;
+    box-lines: multiple;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = wrap-reverse) {
+    -webkit-lines: multiple;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-box-lines: multiple;
+    -o-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = nowrap) {    
+    -webkit-lines: single;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -ms-box-lines: single;
+    -o-box-lines: single;
+    box-lines: single;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {    
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-box-align: start;
+    -o-box-align: start;
+    box-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) { 
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-box-align: end;
+    -o-box-align: end;
+    box-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -webkit-box-align: @value;
+    -moz-box-align: @value;
+    -ms-box-align: @value;
+    -o-box-align: @value;
+    box-align: @value;
+}
+
+.vendor(@property, @value) when (@property = flex-grow)  {
+    -webkit-box-flex: @value;
+}
+
+
+// 2012 flexbox syntax https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
+.vendor(@property, @value) when (@property = display) and (@value = flex) {
+    display: -ms-flexbox;
+}
+
+.vendor(@property, @value) when (@property = align-items)  {
+    -ms-flex-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {
+    -ms-flex-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) {
+    -ms-flex-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = flex-start)  {
+    -ms-flex-line-pack: start;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = flex-end)  {
+    -ms-flex-line-pack: end;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = space-between)  {
+    -ms-flex-line-pack: justify;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = space-around)  {
+    -ms-flex-line-pack: distribute;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = center), (@property = align-content) and (@value = stretch)  {
+    -ms-flex-line-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content)  {
+    -ms-flex-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-start)  {
+    -ms-flex-pack: start;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-end)  {
+    -ms-flex-pack: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-between)  {
+    -ms-flex-pack: justify;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-around)  {
+    -ms-flex-pack: distribute;
+}
+
+.vendor(@property, @value) when (@property = order) {
+    -ms-flex-order: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) { 
+    -ms-flex-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) { 
+    -ms-flex-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -ms-flex-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = flex-start) { 
+    -ms-flex-item-align: start;
+    flex-item-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = flex-end) {
+    -ms-flex-item-align: end;
+    flex-item-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = auto), (@property = align-self) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -ms-flex-item-align: @value;
+    flex-item-align: @value;
+}
+
+
+.vendor(@property, @value) when (isstring(@value) = false) {
+    -webkit-@{property}: @value;
+     -khtml-@{property}: @value;
+       -moz-@{property}: @value;
+            @{property}: @value;
+}
+
+.vendor(@property, @value) when (isstring(@value) = true) {
+    -webkit-@{property}: e(@value);
+     -khtml-@{property}: e(@value);
+       -moz-@{property}: e(@value);
+            @{property}: e(@value);
+}
+
+.button(@color, @bg_color) {
+    text-transform: uppercase;   
+    letter-spacing: inherit;
+    background-color: @bg_color;
+    color: @color;
+    box-shadow: 0 1px 3px 0 fade(@black-darker, 12%), 0 1px 2px 0 fade(@black-darker, 24%);
+    outline: 0;
+    outline-offset: 0;
+    border: 0;
+    border-radius: 2px;
+    .vendor(transition, all .15s ease-in-out);
+    display: inline-block;
+    width: auto;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: @bg_color;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    .vendor(touch-action, manipulation);
+    cursor: pointer;
+    .vendor(user-select, none);
+    font-family: Roboto,'Helvetica Neue, Helvetica, Arial',sans-serif;
+    background-image: none;
+    margin: 0;
+    text-decoration: none;
+    &:hover, &:focus {
+        background-color: darken(@bg_color, 10%);
+        color: @color;
+        outline: 0;
+        outline-offset: 0;
+        border: 0;
+    }
+}
+
+
+.solid-hover-button(@color, @bg_color) {
+    .button(@color, transparent);
+    border: 1px solid @color;    
+    line-height: 2em;
+    .vendor(transition, all .3s);
+    &:hover, &:focus {
+        color: @white-lighter;
+        background-color: @bg_color;
+        border: 1px solid @bg_color;
+    }
+}
+
+.hover-button(@color, @bg_color) {
+    .button(@color, transparent);
+    border: 1px solid @color;
+    line-height: 2em;
+    .vendor(transition, all .3s);
+    &:hover, &:focus {
+        color: @bg_color;
+        border: 1px solid @bg_color;
+    }
+}
+
+
+.container-width() {
+    @media (min-width: 786px) {
+        max-width: 756px !important;
+    }
+
+    @media (min-width: 900px) {
+        max-width: 870px !important;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 962px !important;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1080px !important;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1300px !important;
+    }
+}
+
+.container() {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;    
+    @media (max-width: 786px) {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .container-width();
+}
+
+.table() {
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin-bottom: 20px;
+    table-layout: fixed;
+    width: 100%;        
+    &, th, td {
+        border: 1px solid @white-darker;
+    }
+    caption, th, td {
+        font-weight: 300;
+        text-align: left;
+    }
+    th, td {
+        padding: 8px;
+    }
+    thead {
+        tr {            
+            &:hover {
+                background-color: @white;
+            }            
+            th {
+                border-width: 0 1px 1px 0;
+                font-weight: 700;
+            }
+        }
+    }
+    tbody {
+        tr {            
+            &:nth-of-type(even) {
+                background-color: @white-lighter;
+            }
+            &:nth-of-type(odd) {
+                background-color: @white-light;
+            }
+            &:hover {
+                background-color: @white;
+            }            
+            td {
+                border-width: 0 1px 1px 0;
+                p {
+                    margin: 0;
+                }
+            }
+        }            
+    }    
+}

@@ -1,0 +1,137 @@
+@import "variables.less";
+
+#reviews {
+    #comments {
+        margin: 0;
+        > h2 {
+            display: none;
+        }
+        ol.commentlist {
+            li {
+                .comment_container {
+                    margin-bottom: 50px;
+                    img {
+                        width: 50px;
+                        border-radius: 100%;
+                        display: block;
+                        height: 50px;
+                        float:left;
+                        margin-right: 15px;
+                    }
+                    .comment-text {
+                        display: block;
+                        margin-left: 65px;
+                        .meta {
+                            margin-bottom: 10px;
+                        }
+                        .description {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #review_form {
+        #reply-title {
+            padding: 0;
+            color: @black-dark;
+            font-weight: 700;
+            font-family: Montserrat,Helvetica,Arial,sans-serif;
+            line-height: 1.22222222;
+            font-size: 1.125em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #commentform {
+            .comment-form-author {
+                float: left;
+                width: 50%;
+                padding-right: 15px;
+                box-sizing: border-box;
+            }
+            .comment-form-email {
+                float: left;
+                width: 50%;
+                padding-left: 15px;
+                box-sizing: border-box;
+            }
+            .comment-form-rating, .comment-form-comment {
+                width: 100%;
+            }
+            .comment-form-rating {
+                .stars {
+                    span {
+                        a {
+                            display: inline-block;
+                            font-weight: 700;
+                            margin-right: 1em;
+                            text-indent: -9999px;
+                            position: relative;
+                            border-bottom: 0!important;
+                            outline: 0;
+                            border: none;
+                            line-height: 14px;
+                            font-family: star;
+                            color: fade(@black-darker, 20%);
+                            &.star-1, &.star-2, &.star-3, &.star-4, &.star-5{
+                                &::after {
+                                    text-indent: 0;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }                                
+                                &.active::after {
+                                    color: #F4D819;
+                                }
+                            }                              
+                            &.star-1 {
+                                width: 2em;
+                                &::after {
+                                    content: "\73";
+                                }
+                            }
+                            &.star-2 {
+                                width: 3em;
+                                &::after {
+                                    content: "\73\73";
+                                }
+                            }
+                            &.star-3 {
+                                width: 4em;
+                                &::after {
+                                    content: "\73\73\73";
+                                }
+                            }
+                            &.star-4 {
+                                width: 5em;
+                                &::after {
+                                    content: "\73\73\73\73";
+                                }
+                            }
+                            &.star-5 {
+                                width: 6em;
+                                &::after {
+                                    content: "\73\73\73\73\73";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .social_connect_ui  {
+            .comment-form-social-connect {
+                margin: 0;
+            }
+        }        
+        #submit {
+            .button(fade(@white-lighter, 87%), @gray-lighter);
+            min-width: 88px;
+            padding: 10px 14px;            
+            font-size: 14px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+    }
+}
