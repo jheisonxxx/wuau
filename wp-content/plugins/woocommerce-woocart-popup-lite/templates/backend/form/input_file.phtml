@@ -1,0 +1,35 @@
+<?php
+if ($currentValue != '')
+{
+        
+    $iconUrl = $this->getPluginIconsUrl('user', $currentValue);
+    
+    if ($this->isUploadCustomIcon()){
+         $iconUrl .= "?update"; 
+    }
+
+    $selected = (array_key_exists('selected', $item)) ? ' festi-cart-selected' : '';
+    
+    $params = array(
+        'delete_custom_icon' => 'true'
+    );
+    
+    $removalLink = $this->getUrl($params);
+?>
+
+<div class="festi-cart-icon festi-cart-custom"> 
+    <span class="<?php echo $selected;  ?>">
+        <img  id="0"  align="absmiddle" src="<?php echo $iconUrl;  ?>" />
+    </span>
+    
+    <a title="<?php  _e('Delete Icon', $this->_languageDomain); ?>" class="delete-icon" href="<?php echo  $removalLink; ?>">
+        <img height="10" width="10"  align="absmiddle" src="<?php echo $this->getPluginImagesUrl('delete.png'); ?>" />
+    </a>
+</div>
+<?php  
+}
+
+$disabled = ($this->_currentIconFolder == 'default') ? 'disabled="disabled"' : '';
+?>
+<input name="<?php echo $ident; ?>" type="hidden" value="<?php echo  $currentValue; ?>">
+<input <?php echo $disabled; ?> id="filebutton" name="<?php echo $ident; ?>" class="input-file" type="file">

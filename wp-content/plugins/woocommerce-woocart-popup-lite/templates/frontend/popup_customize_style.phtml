@@ -1,0 +1,336 @@
+<?php
+$backgroundAroundOpacity = $settings['popupAroundBackOpacity']/10;
+$backgroundOpacity = $settings['popupBackgroundOpacity']/10;
+$rgb = $this->convertHexToRgb($settings['popupBackgroundColor']);
+?>
+<style>
+    div.b-modal
+    {
+        background-color: <?php echo $settings['popupAroundBackColor'];?> !important;
+        opacity: <?php echo $backgroundAroundOpacity;?> !important;
+        z-index: 9999998 !important;
+    }
+    div#festi-cart-pop-up-content
+    {
+        z-index: 9999999 !important;
+    }
+    div#festi-cart-pop-up-content div.festi-cart-pop-up-body
+    {
+        border:  <?php echo $settings['popupBorderWidth'];?>px solid;
+        border-radius: <?php echo $settings['popupBorderRadius'];?>px;
+        border-color: <?php echo $settings['popupBorderColor'];?>;
+        padding: <?php echo $settings['popupPadding'];?>px;
+        box-shadow: 
+            0 
+            0 
+            <?php echo $settings['popupShadowBlur'];?>px 
+            <?php echo $settings['popupShadowWidth'];?>px 
+            <?php echo $settings['popupShadowColor'];?>;
+        width: <?php echo $settings['popupWidth'];?>px;
+        background-color: rgba(
+            <?php echo $rgb[0]; ?>,
+            <?php echo $rgb[1]; ?>,
+            <?php echo $rgb[2]; ?>,
+            <?php echo $backgroundOpacity; ?>
+        );
+    }
+    
+    div.festi-cart-pop-up-body div.festi-cart-pop-up-header
+    {
+        text-align: <?php echo $settings['popupHeaderTextAlign'];?>;
+        margin: 
+            <?php echo $settings['popupHeaderTextMarginTop'];?>px
+            <?php echo $settings['popupHeaderTextMarginRight'];?>px
+            <?php echo $settings['popupHeaderTextMarginBottom'];?>px
+            <?php echo $settings['popupHeaderTextMarginLeft'];?>px;
+    }
+    
+    div.festi-cart-pop-up-body div.festi-cart-pop-up-header span.festi-cart-added-to-cart-msg
+    {
+        color: <?php echo $settings['popupHeaderTextColor'];?>;
+        font-size: <?php echo $settings['popupHeaderTextFontSize'];?>px;
+    }
+    div#festi-cart-pop-up-content span.festi-cart-closed.b-close
+    {
+        <?php
+        if (!array_key_exists('displayPopupCloseButton', $settings)) {
+        ?>   
+            display: none;
+        <?php
+        } else {
+        ?>   
+            display: block;
+        <?php         
+        }
+        ?>
+        float: right;
+        cursor: pointer;
+        position: relative;
+        right: <?php echo $settings['popupCloseButtonMarginRight'];?>px;
+        top: <?php echo $settings['popupCloseButtonMarginTop'];?>px;
+    }
+    
+    div#festi-cart-pop-up-content span.festi-cart-closed.b-close span.festi-cart-closed-button
+    {
+        font-size: <?php echo $settings['popupCloseButtonSize'];?>px;
+        font-weight: bold;
+        color: <?php echo $settings['popupCloseButtonColor'];?>;
+    }
+    
+    div#festi-cart-pop-up-content span.b-close span.festi-cart-closed-button:hover
+    {
+        color: <?php echo $settings['popupCloseButtonHoverColor'];?>;
+    }
+    
+    div.festi-cart-pop-up-body div.festi-cart-pop-up-footer
+    {
+        text-align: <?php echo $settings['popupContinueButtonAlign'];?>
+    }
+    
+    div.festi-cart-pop-up-footer span.festi-cart-continue.b-close span.festi-cart-continue-shopping
+    {
+        <?php 
+        if (!array_key_exists('displayPopupContinueButton', $settings)) {
+        ?>   
+            display: none;
+        <?php
+        } else {
+            if ($settings['popupContinueButtonWidthType'] == 'full') {
+            ?>
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+            <?php  
+            }
+            
+            if ($settings['popupContinueButtonWidthType'] == 'custom') {
+            ?>
+                width: <?php echo $settings['popupContinueButtonWidth'];?>px;
+            <?php  
+            }
+        }
+        ?>
+        
+         border: <?php echo $settings['popupContinueButtonBorderWidth'];?>px solid;
+         border-color: <?php echo $settings['popupContinueButtonBorderColor'];?>;
+         border-radius: <?php echo $settings['popupContinueButtonBorderRadius'];?>px;
+         background-color: <?php echo $settings['popupContinueButtonBackground'];?>;
+         color: <?php echo $settings['popupContinueButtonFontColor'];?>;
+         font-size: <?php echo $settings['popupContinueButtonFontSize'];?>px;
+         line-height: <?php echo $settings['popupContinueButtonFontSize'];?>px;
+         padding-top: <?php echo $settings['popupContinueButtonPaddingTop'];?>px;
+         padding-bottom: <?php echo $settings['popupContinueButtonPaddingBottom'];?>px;
+    }
+    
+    div.festi-cart-pop-up-footer span.festi-cart-continue.b-close span.festi-cart-continue-shopping:hover
+    {
+         background-color: <?php echo $settings['popupContinueButtonHoverBackground'];?>;
+         border-color: <?php echo $settings['popupContinueButtonHoverBorderColor'];?>;
+         color: <?php echo $settings['popupContinueButtonHoverFontColor'];?>;
+    }
+
+    /*product list analog Start */
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title a.festi-cart-title,
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-title
+    {
+        color: <?php echo $settings['productFontColor'];?>;
+        font-size: <?php echo $settings['productListFontSize'];?>px;
+    }
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title a.festi-cart-title:hover
+    {
+        color: <?php echo $settings['productHoverFontColor'];?>;
+    }
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-count,
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price,
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price span.amount
+    {
+        color: <?php echo $settings['productTotalPriceFontColor'];?>;
+        font-size: <?php echo $settings['productListFontSize'];?>px;
+    }
+    body div.festi-cart-pop-up-products-content  div.festi-cart-total
+    {
+        <?php
+        if (!array_key_exists('displayProductListTotal', $settings)) {
+        ?>   
+            display: none;
+        <?php
+        }
+        ?>
+        border: <?php echo $settings['productListTotalPriceBorderWidth'];?>px solid;
+        border-color: <?php echo $settings['productListTotalPriceBorderColor'];?>;
+        border-radius: <?php echo $settings['productListTotalPriceBorderRadius'];?>px;
+        background-color: <?php echo $settings['productListTotalPriceBackground']?>;
+        color: <?php echo $settings['productListTotalPriceFontColor'];?>;
+        font-size: <?php echo $settings['productListFontSize'];?>px;
+        text-align: <?php echo $settings['productListTotalTextAlign'];?>;
+    }
+    <?php 
+    if ($settings['productListButtonsFontWeight'] == 'bold') {
+    ?>   
+        div.festi-cart-pop-up-products-content  p.festi-cart-buttons a.festi-cart-view-cart,
+        div.festi-cart-pop-up-products-content  p.festi-cart-buttons a.festi-cart-checkout
+        {
+            font-weight: bold;
+        }
+    <?php
+    }
+    ?>
+    
+    
+    body div.festi-cart-pop-up-products-content  p.festi-cart-buttons a.festi-cart-view-cart
+    {
+        <?php 
+        if (!array_key_exists('displayViewCartButton', $settings)) {
+        ?>   
+            display: none;
+        <?php
+        } else {
+            if ($settings['viewCartButtonWidthType'] == 'full') {
+            ?>
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+            <?php  
+            }
+            
+            if ($settings['viewCartButtonWidthType'] == 'custom') {
+            ?>
+                width: <?php echo $settings['viewCartButtonWidth'];?>px;
+            <?php  
+            }
+        }
+        ?>
+        
+         border: <?php echo $settings['viewCartButtonBorderWidth'];?>px solid;
+         border-color: <?php echo $settings['viewCartButtonBorderColor'];?>;
+         border-radius: <?php echo $settings['viewCartButtonBorderRadius'];?>px;
+         background-color: <?php echo $settings['viewCartButtonBackground'];?>;
+         color: <?php echo $settings['viewCartButtonFontColor'];?>;
+         font-size: <?php echo $settings['productListFontSize'];?>px;
+         padding-top: <?php echo $settings['viewCartButtonPaddingTop'];?>px;
+         padding-bottom: <?php echo $settings['viewCartButtonPaddingBottom'];?>px;
+    }
+    body div.festi-cart-pop-up-products-content  p.festi-cart-buttons a.festi-cart-view-cart:hover
+    {
+         background-color: <?php echo $settings['viewCartButtonHoverBackground'];?>;
+         border-color: <?php echo $settings['viewCartButtonHoverBorderColor'];?>;
+         color: <?php echo $settings['viewCartButtonHoverFontColor'];?>;
+    }
+    
+    body div.festi-cart-pop-up-products-content  p.festi-cart-buttons a.festi-cart-checkout
+    {
+         <?php 
+        if (!array_key_exists('displayCheckoutButton', $settings)) {
+        ?>   
+            display: none;
+        <?php
+        } else {
+            if ($settings['checkoutButtonWidthType'] == 'full') {
+            ?>
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+            <?php  
+            }
+            
+            if ($settings['checkoutButtonWidthType'] == 'custom') {
+            ?>
+                width: <?php echo $settings['checkoutButtonWidth'];?>px;
+            <?php  
+            }
+        }
+        ?>
+        
+         border: <?php echo $settings['checkoutButtonBorderWidth'];?>px solid;
+         border-color: <?php echo $settings['checkoutButtonBorderColor'];?>;
+         border-radius: <?php echo $settings['checkoutButtonBorderRadius'];?>px;
+         background-color: <?php echo $settings['checkoutButtonBackground'];?>;
+         color: <?php echo $settings['checkoutButtonFontColor'];?>;
+         font-size: <?php echo $settings['productListFontSize'];?>px;
+         padding-top: <?php echo $settings['checkoutButtonPaddingTop'];?>px;
+         padding-bottom: <?php echo $settings['checkoutButtonPaddingBottom'];?>px;
+    }
+    
+    body div.festi-cart-pop-up-products-content  p.festi-cart-buttons a.festi-cart-checkout:hover
+    {
+         background-color: <?php echo $settings['checkoutButtonHoverBackground'];?>;
+         border-color: <?php echo $settings['checkoutButtonHoverBorderColor'];?>;
+         color: <?php echo $settings['checkoutButtonHoverFontColor'];?>;
+    }
+    
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete
+    {
+        vertical-align: <?php echo $settings['deleteButtonVerticalAlignment'];?>;  
+    }
+    
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product
+    {   
+        font-size: <?php echo $settings['deleteButtonSize'];?>px;
+        line-height: <?php echo $settings['deleteButtonSize'];?>px;
+        color: <?php echo $settings['deleteButtonFontColor'];?>;
+        float: <?php echo $settings['deleteButtonPosition'];?>;
+    }
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product:hover
+    {   
+        color: <?php echo $settings['deleteButtonHoverFontColor'];?>;
+    }
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list tr,
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list tr td
+    {
+        border-bottom: <?php echo $settings['delimiterPositionsWidth'];?>px solid;
+        border-bottom-color: <?php echo $settings['delimiterPositionsColor'];?>;
+    }
+    div.festi-cart-pop-up-products-content  table.festi-cart-list tr.festi-cart-empty
+    {
+        color: <?php echo $settings['productListEmptyFontColor'];?>;
+        padding: 0;
+    }
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list tr.festi-cart-empty td.festi-cart-empty
+    {
+        padding-top: <?php echo $settings['productListEmptyPaddingTop'];?>px;
+        padding-bottom: <?php echo $settings['productListEmptyPaddingBottom'];?>px;
+    }
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-img a.festi-cart-img img,
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-img span.festi-cart-img img
+    {
+        <?php
+        if ($settings['productImageMaxWidth']) {
+        ?>       
+            max-width: <?php echo $settings['productImageMaxWidth'];?>px;
+        <?php
+        }
+        ?>  
+        <?php
+        if ($settings['productImageMaxHeight']) {
+        ?>    
+            max-height: <?php echo $settings['productImageMaxHeight'];?>px;
+        <?php
+        } else {
+        ?> 
+            width: <?php echo $settings['productImageMaxWidth'];?>px;
+        <?php
+        }
+        ?>
+    }
+    
+    body div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-variation-attribut
+    {
+        font-size: <?php echo ($settings['productListFontSize']-1);?>px;
+        display: block;
+    }
+    
+     <?php 
+        if (array_key_exists('popupProductsListScroll', $settings)) {
+        ?>   
+            body div.festi-cart-pop-up-products-content div#festi-cart-pop-up-products-list-body {
+                max-height: <?php echo $settings['popupProductsListScrollHeight']; ?>px;
+                overflow: hidden;
+                overflow-y: auto;
+            }
+        <?php
+        }
+     ?>
+    
+    
+     /*product list analog END */
+</style>

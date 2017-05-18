@@ -1,0 +1,13 @@
+<?php 
+$checked = (isset($currentValue)) ? ' checked="checked"' : '';
+$data = (isset($item['event'])) ? ' data-event="'.$item['event'].'"' : '';
+?>
+
+<input <?php echo $data;?> name="<?php echo $ident;?>" <?php echo $checked;?> type="checkbox" value="1"> 
+<span class="festi-cart-lable">
+    <?php 
+    if(isset($item['lable'])) {
+        echo $item['lable'];
+    } 
+    ?>
+</span>

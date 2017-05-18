@@ -1,0 +1,133 @@
+*** Checkout Field Editor Changelog ***
+
+2015.11.03 - version 1.4.8
+* Fix - Unexpected token error in checkout when a required field is added to shipping tab.
+
+2015.10.07 - version 1.4.7
+* Fix - Add jQuery tiptip as a dependency when script loads to prevent edge case it does not load.
+
+2015.09.29 - version 1.4.6
+* Feature - Add support for Customer/Order XML Export Suite
+
+2015.08.16 - version 1.4.5
+* Fix - Field saving
+
+2015.08.05 - version 1.4.4
+* Fix - Checkbox field validation value is not displaying after saving
+
+2015.07.20 - version 1.4.3
+* Fix - Undefined shiptobilling posted item causing notice in WC 2.4
+* Fix - Undefined custom posted item causing notice in WC 2.4
+
+2015.05.18 - version 1.4.2
+* Fix - Additional fields order notes not ordered correctly
+
+2015.04.21 - version 1.4.1
+* Fix - Potential XSS with add_query_arg/remove_query_arg.
+* Fix - Removed chosen to prevent conflicts.
+* Fix - Additonal fields error.
+
+2015.04.13 - version 1.4.0
+* Add - option to enable/disable order comments in additional fields
+
+2015.04.04 - version 1.3.1
+* Fix - Deprecated add error function
+* Fix - Undefined placeholder notices
+* Tweak - Prevent double validating an email field
+
+2015.03.03 - version 1.3.0
+* Fix - Allow blank placeholder value for selects. Requires WC 2.3.6
+* Tweak - Datepicker, show -100, +1 years.
+* Tweak - Prevent editing of locale-defined field labels and placeholders. Translations should be used instead.
+
+2015.01.29 - version 1.2.11
+* Fix - Backwards compatibility
+
+2015.01.28 - version 1.2.10
+* Fix - WC 2.3 support
+
+2015.01.27 - version 1.2.9
+* New - WC 2.3 compatibility (chosen -> select2)
+
+2014.12.31 - version 1.2.8
+* Include custom fields in CSV export to email
+
+2014.11.28 - version 1.2.7
+* Enqueue woocommerce_chosen_styles
+
+2014.11.14 - version 1.2.6
+* Fix custom field display in sent emails.
+
+2014.10.10 - version 1.2.5
+* Add support for Customer/Order CSV Export
+
+2014.07.10 - version 1.2.4
+* Add chosen to all fields
+
+2014.06.02 - version 1.2.3
+* Keep postcode field properties so it works when not required.
+
+2014.05.07 - version 1.2.2
+* Fix display options
+
+2014.04.22 - version 1.2.1
+* Fix display of validation rules
+
+2014.04.22 - version 1.2.0
+* Fix display_options saving
+
+2014.04.17 - version 1.1.9
+* Fix wc_display_custom_fields_view_order to prevent listing data multiple times
+
+2014.03.28 - version 1.1.8
+* Add option to display fields in emails or on order detail pages
+
+2014.02.07 - version 1.1.7
+* Datepicker change month/year
+
+2014.02.07 - version 1.1.6
+* Made "Select some options" translatable
+
+2014.01.20 - version 1.1.5
+* 2.1 compat
+
+2013.10.31 - version 1.1.4
+* Check new name to prevent dupe rows
+* Prevent using reserved names
+
+2013.10.21 - version 1.1.3
+* Fix for foreign characters in name field
+
+2013.10.21 - version 1.1.2
+* Fix initial 'checked' status of radio inputs
+
+2013.09.27 - version 1.1.1
+* Fix JS error
+
+2013.09.23 - version 1.1.0
+* Add 'heading' field type
+
+2013.08.01 - version 1.0.6
+* Fix to allow state fields to be disabled.
+
+2013.07.22 - version 1.0.5
+* Fix to prevent state always being required.
+
+2013.06.17 - version 1.0.4
+* Use date_format from WP
+
+2013.05.23 - version 1.0.3
+* Multiselect - send value, not key
+* Selects - Make key = value
+
+2013.05.16 - version 1.0.2
+* Fix screen id when translated
+* stripslashes on labels
+* Allow html in labels
+
+2013.05.07 - version 1.0.1
+* Sanitize option names fully
+* Fix radio input validation
+
+2013.03.01 - version 1.0.0
+* First Release

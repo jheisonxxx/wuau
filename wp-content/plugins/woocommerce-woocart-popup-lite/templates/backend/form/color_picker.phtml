@@ -1,0 +1,32 @@
+<?php
+$hide = '';
+if (isset($hidden)) {
+    $hide = ' style="visibility:hidden" ';
+} 
+?>
+
+<div <?php echo $hide; ?> class="festi-color-selector festi-cart-<?php echo $ident; ?>" >
+    <input type="hidden" name="<?php echo $ident; ?>"  value="<?php echo $currentValue; ?>">
+    <div style="background-color: <?php echo $currentValue; ?>"></div>
+</div>
+
+<script type="text/javascript">
+jQuery( document ).ready(function() 
+{
+    var element = '.festi-color-selector.festi-cart-<?php echo $ident; ?>'
+    
+    jQuery(element).ColorPicker({
+        onSubmit: function(hsb, hex, rgb, el) {
+            jQuery(element + ' input').val('#'+hex);
+            jQuery(el).ColorPickerHide();
+        },
+        onChange: function (hsb, hex, rgb) {
+            jQuery(element + ' div').css('backgroundColor', '#' + hex);
+            jQuery(element + ' input').val('#'+hex);
+        },
+        onBeforeShow: function () {
+            jQuery(this).ColorPickerSetColor(jQuery(element + ' input').val());
+        }
+    });
+});
+</script>

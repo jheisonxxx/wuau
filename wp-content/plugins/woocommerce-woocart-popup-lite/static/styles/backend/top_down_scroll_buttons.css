@@ -1,0 +1,41 @@
+.festi-cart-go-up,
+.festi-cart-go-down
+{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    right: 10px;
+    background: #4F4F4F;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font: normal normal 20px/20px sans-serif;
+    text-shadow: 0 1px 2px #000;
+    opacity: .5;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.festi-cart-go-down
+{
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.festi-cart-go-up
+{
+    bottom: 55px; 
+}
+.festi-cart-go-down
+{
+    bottom: 10px;
+}
+.festi-cart-go-down:hover,
+.festi-cart-go-up:hover
+{
+    opacity: 1;
+    box-shadow: 0 2px 0.5em -1px #666;
+}

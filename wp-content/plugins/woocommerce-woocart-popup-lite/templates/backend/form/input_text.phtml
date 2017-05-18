@@ -1,0 +1,7 @@
+<?php 
+$class = (isset($item['class'])) ? $item['class'] : '';
+
+$data = (isset($item['event'])) ? ' data-event="'.$item['event'].'"' : '';
+?>
+
+<input type="text" <?php echo $data;?>  class="<?php echo $class ;?> " name="<?php echo $ident; ?>" value ='<?php echo $currentValue; ?>' >

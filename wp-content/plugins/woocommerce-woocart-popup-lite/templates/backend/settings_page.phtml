@@ -1,0 +1,52 @@
+<div class="festi-cart">
+    <?php
+        $params = array(
+            'delete_custom_icon' => '',
+            'refresh_plugin' => ''
+        );
+        $url = $this->getUrl($params);
+    ?>
+    <form action="<?php echo $url; ?>" enctype="multipart/form-data" method="post" class="festi-cart festi-cart-form">
+        <input type="hidden" name="__action" value="save" /> 
+        <?php
+        foreach ($fieldset as $key => $item) { 
+        ?>
+            <fieldset style="" class="festi-cart-<?php echo $key; ?>">
+                <!--<legend><h3><?php echo $item['legend']; ?></h3></legend>-->
+                <div class="festi-cart-fildset-header">
+                    <?php if (isset($item['display']) && $item['display'] === true) { ?>
+                    
+                    <span class="festi-cart-expand-block"><?php echo __('Hide', $this->_languageDomain); ?><span class="festi-cart-expand" >&#9650;</span></span>
+                    <span   style="display: none;" class="festi-cart-collapse-block"><?php echo __('Open', $this->_languageDomain); ?><span class="festi-cart-collapse" >&#9660;</span></span>
+                    <?php
+                    } else {
+                    ?>
+                    <span style="display: none;" class="festi-cart-expand-block"><?php echo __('Hide', $this->_languageDomain); ?><span class="festi-cart-expand" >&#9650;</span></span>
+                    <span    class="festi-cart-collapse-block"><?php echo __('Open', $this->_languageDomain); ?><span class="festi-cart-collapse" >&#9660;</span></span>
+                    <?php 
+                    }
+                    ?>
+                    
+                    <div class="festi-cart-fildset-content">
+                    <?php echo $item['legend']; ?>
+                    </div>
+                </div>
+                
+                <?php
+                $vars = array (
+                    'item' => $item,
+                    'currentValues' => $currentValues,
+                    'fildset' => $key
+                );        
+                
+                echo $this->fetch('settings_filds.phtml', $vars);
+                ?>        
+                </fieldset>
+        <?php
+        }
+        ?>
+            <input type="submit" id="cartSettings" value="<?php echo __('Save', $this->_languageDomain); ?>"  class="button button-primary">
+    </form>   
+</div>
+
+<?php echo $this->fetch('top_down_scroll_buttons.phtml');?>

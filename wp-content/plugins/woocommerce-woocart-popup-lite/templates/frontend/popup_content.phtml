@@ -1,0 +1,174 @@
+<div class="festi-cart-pop-up-products-content">
+<div id="festi-cart-pop-up-products-list-body">
+    <table class="festi-cart-list">
+            <?php
+            $productsCount = $woocommerce->cart->get_cart_contents_count();
+            
+        if ($productsCount > 0) {
+                
+            $changeBgColor = 'festi-cart-next';
+            $maxStep = 5;
+            $step = 0;
+            
+            foreach ($woocommerce->cart->cart_contents as $cart_item_key => $cart_item) {
+                
+                $step++;
+                
+                $changeBgColor = ($changeBgColor != 'festi-cart-next') ? 'festi-cart-next' : '';
+                
+                $product = $cart_item['data'];
+                $productImg = '';
+                if (array_key_exists('displayProductsPictures', $settings)) {
+                    
+                    if (array_key_exists('productDefaultThumbnail', $settings)) {                 
+                        $img = $product->get_image();    
+                    } else {
+                       if ($settings['productImageMaxHeight'] == 0)
+                       {
+                            $settings['productImageMaxHeight'] = $settings['productImageMaxWidth'];    
+                       }
+                       
+                       if ($settings['productImageMaxWidth'] == 0)
+                       {
+                            $settings['productImageMaxWidth'] = $settings['productImageMaxHeight'];    
+                       }
+                        
+                       $productId = ($cart_item['variation_id']) ? $product->id : $product->ID;
+                       
+                       $variationId = ($cart_item['variation_id']) ? $cart_item['variation_id'] : '';
+                       
+                       if (!has_post_thumbnail($productId) && !has_post_thumbnail($variationId)) {
+                           $img = $product->get_image();                      
+                       } else {
+                           $img = $product->get_image(array($settings['productImageMaxWidth'], $settings['productImageMaxHeight']));    
+                       }
+                    }
+    
+                    $productImg = apply_filters( 'woocommerce_cart_item_thumbnail', $img, $cart_item, $cart_item_key );
+        
+                    if ($product->is_visible()) {
+                        $productImg = '<a class="festi-cart-img" href="'.$product->get_permalink().'">'.$productImg.'</a>';
+                    } elseif ($product->post->post_parent) {
+                        $productImg = '<a class="festi-cart-img" href="'.get_permalink($product->post->post_parent).'">'.$productImg.'</a>';    
+                    } else {
+                        $productImg = '<span class="festi-cart-img">'.$productImg.'</span>';
+                    }
+                }
+                
+                $productTitle = '';
+                if (array_key_exists('displayProductTitle', $settings)) {
+                    if ($product->is_visible()) {
+                        $productTitle = apply_filters( 'woocommerce_cart_item_name', sprintf( '<a class="festi-cart-title" href="%s">%s</a>', $product->get_permalink(), $product->get_title() ), $cart_item, $cart_item_key );               
+                    } elseif ($product->post->post_parent) {
+                        $productTitle = apply_filters( 'woocommerce_cart_item_name', sprintf( '<a class="festi-cart-title" href="%s">%s</a>', get_permalink($product->post->post_parent), $product->get_title() ), $cart_item, $cart_item_key );  
+                    } else {
+                        $productTitle =  apply_filters( 'woocommerce_cart_item_name', '<span class="festi-cart-title">'.$product->get_title().'</span>', $cart_item, $cart_item_key );    
+                    }
+                    
+                    $productTitle .= '<br>';
+                    
+                    if (($cart_item['variation_id'])) {
+                        $content = $woocommerce->cart->get_item_data($cart_item, true);
+                        $content = explode("\n", $content);
+    
+                        foreach ($content as $value) {
+                            if (!$value) {
+                                continue;
+                            }
+                            $productTitle .= '<span class="festi-cart-product-variation-attribut">'.$value.'</span>';  
+                        }
+                    }          
+                }
+                ?>         
+    
+                <tr class="festi-cart-item <?php echo $changeBgColor; ?>">
+                    <?php
+                    if ($settings['deleteButtonPosition'] == 'left' 
+                        && array_key_exists('displayDeleteButton', $settings)) {
+                    ?>
+                        <td class="festi-cart-product-delete">
+                            <a href="<?php echo $cart_item_key;?>" class="festi-cart-remove-product">&times;</a>
+                        </td>
+                    <?php   
+                    } 
+                    
+                    if (array_key_exists('displayDeleteButton', $settings)) {
+                    ?>
+                        <td class="festi-cart-product-img">
+                    <?php     
+                    } else {
+                    ?>
+                        <td colspan="2" class="festi-cart-product-img">
+                    <?php        
+                    }
+                    ?>
+                        <?php echo $productImg;?>
+                    </td>
+                    <td class="festi-cart-product-title" >
+                      <?php echo $productTitle;?>
+                      
+                    <?php  if (array_key_exists('displayProductTotalPrice', $settings)) { ?>
+                        <span class="festi-cart-product-count"><?php echo $cart_item['quantity'];?> x</span>
+                        <span class="festi-cart-product-price"><?php echo woocommerce_price($product->get_price()); ?></span>
+                    <?php } ?>
+                    </td>
+                     <?php
+                    if ($settings['deleteButtonPosition'] == 'right' 
+                        && array_key_exists('displayDeleteButton', $settings)) {
+                    ?>
+                        <td class="festi-cart-product-delete">
+                            <a href="<?php echo $cart_item_key;?>" class="festi-cart-remove-product">&times;</a>
+                        </td>
+                    <?php   
+                    } 
+                    ?>
+                </tr>
+                <?php    
+                
+                if ($step == $settings['dropdownListAmountProducts'] && $settings['dropdownListAmountProducts'] !=0) {
+                    break;
+                }
+            }
+            
+        } else {
+        ?>
+             <tr class="festi-cart-empty">
+                <td class="festi-cart-empty" colspan="4">
+                    <?php echo $settings['productListEmptyText'];?>
+                </td>
+                
+            </td>
+        </tr>
+        <?php  
+        }    
+      ?> 
+    
+       
+    </table>
+</div>
+<?php
+
+if ($productsCount > 0) {
+    
+?> 
+    <div class="festi-cart-total"><?php echo $settings['productListTotalText'];?>: <?php echo $woocommerce->cart->get_cart_total(); ?></div>
+    <p class="festi-cart-buttons">
+        <?php
+        if ($settings['productListButtonsQueue'] == 'viewCart') {
+        ?>
+            <a class="festi-cart-view-cart" href="<?php echo $woocommerce->cart->get_cart_url();?>" ><?php echo $settings['viewCartButtonText'];?></a>
+            <a class="festi-cart-checkout" href="<?php echo $woocommerce->cart->get_checkout_url();?>" ><?php echo $settings['checkoutButtonText'];?></a>
+        <?php   
+        } else {
+        ?>
+            <a class="festi-cart-checkout" href="<?php echo $woocommerce->cart->get_checkout_url();?>" ><?php echo $settings['checkoutButtonText'];?></a>
+            <a class="festi-cart-view-cart" href="<?php echo $woocommerce->cart->get_cart_url();?>" ><?php echo $settings['viewCartButtonText'];?></a> 
+        <?php    
+        }
+        ?> 
+    </p>
+<?php  
+}    
+?>
+</div>
+

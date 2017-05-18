@@ -1,0 +1,93 @@
+<div
+    <?php if (!isset($item['display']) || $item['display'] === false) { ?>
+         style="display: none;" 
+    <?php
+    }
+    ?>
+     class="festi-cart-fildset-table  festi-cart-<?php echo $fildset; ?>"
+>
+<table cellpadding="0" cellspacing="0"  class="festi-cart-form-table">
+    <tbody>
+        <?php
+        $filds = $item['filds'];
+
+        
+        foreach ($filds as $ident => $item) {
+            $selectorClass = '';
+            $hide = '';
+                         
+            if (isset($item['eventClasses'])) {
+                $class = $item['eventClasses'];
+                
+                $classes = explode(",", $class);
+                
+                foreach ($classes as $value) {
+                   $selectorClass.= ' '.$this->getSelectorClassForDisplayEvent($value); 
+                }
+
+            }
+            
+            if (isset($item['hide']) && $item['hide'] === true) {
+                $hide = 'display: none;';
+            }
+            
+            if ($item['type'] == 'divider') {
+            ?>
+                <tr style="<?php echo $hide; ?>" class="festi-cart-divider <?php echo $selectorClass; ?>">
+                    <th colspan="2">
+                        <?php echo $item['caption']; ?>
+                    </th>
+                </tr>
+            <?php
+                continue;
+            }
+            
+            $backlight = (isset($item['backlight'])) ? 'festi-cart-'.$item['backlight'] : '';
+            
+        ?>
+            <tr style="<?php echo $hide; ?>" class = "<?php echo $selectorClass; ?> <?php echo $backlight; ?>" >
+                <th>
+                    <?php echo $item['caption']; ?>
+                    <?php if(isset($item['hint'])) {
+                    ?>
+                        <img
+                            class="festi-cart-help-tip" 
+                            title="<?php echo $item['hint']; ?> "
+                            src="<?php echo $this->getPluginImagesUrl('help.png'); ?>"
+                            height="16"
+                            width="16"
+                        >
+                    <?php       
+                    } 
+                    ?>
+                </th>
+                <td valign="middle">
+                    <?php
+                    $vars = array (
+                        'ident' => $ident,
+                        'item' => $item
+                    );
+                    
+                    if (isset($currentValues[$ident])) {
+                       $vars['currentValue'] = $currentValues[$ident];
+                    }
+                    
+                    if($item['type'] == 'input_double_text') {
+                        $vars['currentValue'] = $currentValues; 
+                    }
+                    
+                    
+                    if($ident == 'iconList') {
+                       $vars['iconColor'] = $currentValues['iconColor']; 
+                    }
+                    
+                    echo $this->fetch('form/'.$item['type'].'.phtml', $vars);
+                    ?>
+                </td>
+            </tr>
+        <?php
+        }
+        ?>
+    </tbody>
+</table>
+</div>

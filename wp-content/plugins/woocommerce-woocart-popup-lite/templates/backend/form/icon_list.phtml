@@ -1,0 +1,35 @@
+<?php
+ $isUpdatePage = $this->isUpdateOptions('save'); 
+?>
+
+<input  type="hidden" name="<?php echo $ident; ?>" value="<?php echo $currentValue; ?>"/>
+<div class="festi-cart-icon festi-cart-defaults"> 
+    <?php    
+    foreach ($item['images'] as $value => $key) {
+        $iconUrl = $this->getPluginIconsUrl($this->_currentIconFolder, $key);
+        if ($isUpdatePage) {
+            $iconUrl .= "?".time();
+        }
+        
+        $selected = ($currentValue == $value) ? ' festi-cart-selected' : '';
+    ?>
+        <span class="<?php echo $selected;  ?>">
+            <img  width="20" height="20" id="<?php echo $value;  ?>"  align="absmiddle" src="<?php echo $iconUrl;  ?>" />
+        </span>
+    <?php
+    }
+    
+
+    $vars = array(
+        'ident' => 'iconColor',
+        'currentValue' => $iconColor
+    );
+    
+    if ($this->_currentIconFolder == 'default') {
+        $vars['hidden'] = true;
+    }
+
+    echo $this->fetch('form/color_picker.phtml', $vars);
+
+    ?>
+</div>

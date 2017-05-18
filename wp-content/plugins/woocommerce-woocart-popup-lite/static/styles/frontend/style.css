@@ -1,0 +1,308 @@
+body label#festi-cart
+{
+}
+
+body label#festi-cart label#festi-cart label#festi-cart a.festi-cart
+{
+    display:inline-block;
+    overflow: hidden;
+}
+body label#festi-cart label#festi-cart label#festi-cart a.festi-cart.festi-cart-menu
+{
+    overflow: v;
+}
+
+body div.festi-cart-widget-content a.festi-cart.festi-cart-widget,
+body a.festi-cart.festi-cart-shortcode
+{
+    padding: 0;
+}
+
+
+a.festi-cart div.festi-cart-content 
+{
+    display: inline-block;
+    font-style: normal;
+    text-align: left;
+}
+
+a.festi-cart div.festi-cart-content span
+{
+    text-transform: none;
+    font-style: normal;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+a.festi-cart div.festi-cart-content img.festi-cart-icon
+{
+    vertical-align: top;
+    border:0;
+    background-color: transparent;
+    padding: 0;
+    display:inline;
+}
+
+body div.festi-cart-products
+{   
+    padding-top:1px;
+    padding-bottom:5px;
+    position: absolute;
+    z-index: 999999;
+    display: none;
+}
+
+div.festi-cart-products div.festi-cart-products-content
+{
+    padding:5px;
+    overflow:hidden;
+    font-size: 13px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+div.festi-cart-widget-content div.festi-cart-widget-products-content
+{
+    font-size: 13px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+div.festi-cart-pop-up-content  div.festi-cart-pop-up-products-content
+{
+    font-size: 13px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+div.festi-cart-products-content table,
+div.festi-cart-widget-products-content table,
+div.festi-cart-pop-up-products-content table,
+div.festi-cart-products-content table.festi-cart-list td.festi-cart-empty,
+div.festi-cart-widget-products-content table.festi-cart-list td.festi-cart-empty,
+div.festi-cart-pop-up-products-content table.festi-cart-list td.festi-cart-empty
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+div.festi-cart-products-content table.festi-cart-list td.festi-cart-empty,
+div.festi-cart-widget-products-content table.festi-cart-list td.festi-cart-empty,
+div.festi-cart-pop-up-products-content table.festi-cart-list td.festi-cart-empty
+{
+    text-align: center;
+}
+
+div.festi-cart-products-content table.festi-cart-list tr.festi-cart-empty,
+div.festi-cart-widget-products-content table.festi-cart-list tr.festi-cart-empty,
+div.festi-cart-pop-up-products-content table.festi-cart-list tr.festi-cart-empty
+{
+    border-bottom: 0;
+}
+
+body div.festi-cart-arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 92px;
+    z-index: 999;
+    display:none;
+}
+
+
+
+div.festi-cart-products-content  table.festi-cart-list,
+div.festi-cart-products-content  table.festi-cart-list td,
+div.festi-cart-products-content  table.festi-cart-list tr,
+div.festi-cart-widget-products-content  table.festi-cart-list,
+div.festi-cart-widget-products-content  table.festi-cart-list td,
+div.festi-cart-widget-products-content  table.festi-cart-list tr,
+div.festi-cart-pop-up-products-content  table.festi-cart-list,
+div.festi-cart-pop-up-products-content  table.festi-cart-list td,
+div.festi-cart-pop-up-products-content  table.festi-cart-list tr
+{
+    margin: 0;
+    border: 0;
+}
+
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title
+{
+    vertical-align: middle;
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title a.title,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title a.title,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title a.title
+{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-count,
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price,
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price span.amount,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-count,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price span.amount,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-count,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-title span.festi-cart-product-price span.amount
+{
+    color: #aaaaaa;
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-img,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-img,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-img
+{
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td
+{
+    padding: 5px;
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product img,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product img,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product img
+{
+    vertical-align: top;
+}
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete
+{
+       vertical-align: top;
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product,
+div.festi-cart-pop-up-products-content  table.festi-cart-list  tr.festi-cart-item  td.festi-cart-product-delete a.festi-cart-remove-product
+{
+   float: left;
+   vertical-align: top;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item
+{
+    
+}
+
+div.festi-cart-products-content  table.festi-cart-list  tr.festi-cart-item.festi-cart-next,
+div.festi-cart-widget-products-content  table.festi-cart-list  tr.festi-cart-item.festi-cart-next
+{
+}
+
+div.festi-cart-products-content  div.festi-cart-total,
+div.festi-cart-widget-products-content  div.festi-cart-total,
+div.festi-cart-pop-up-products-content  div.festi-cart-total
+{
+    margin-top: 5px;
+    padding:10px;
+    background:#EEEEEE;
+    color:#000; 
+    font-weight: bold;
+    text-align:right;
+    text-transform: none;
+}
+
+div.festi-cart-content span.festi-cart-dropdown-arrow
+{
+    font-size: 1em ;
+    vertical-align: top;
+}
+
+div.festi-cart-products-content  p.festi-cart-buttons,
+div.festi-cart-widget-products-content   p.festi-cart-buttons,
+div.festi-cart-pop-up-products-content   p.festi-cart-buttons
+{
+    margin: 0;
+}
+
+div.festi-cart-products-content  p.festi-cart-buttons a.festi-cart-view-cart,
+div.festi-cart-products-content  p.festi-cart-buttons a.festi-cart-checkout,
+div.festi-cart-widget-products-content   p.festi-cart-buttons a.festi-cart-view-cart,
+div.festi-cart-widget-products-content   p.festi-cart-buttons a.festi-cart-checkout,
+div.festi-cart-pop-up-products-content   p.festi-cart-buttons a.festi-cart-view-cart,
+div.festi-cart-pop-up-products-content   p.festi-cart-buttons a.festi-cart-checkout,
+div.festi-cart-pop-up-footer span.festi-cart-continue.b-close span.festi-cart-continue-shopping
+{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: #444;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 1em;
+    font-family: inherit;
+    overflow: visible;
+}
+
+div.festi-cart-products-content  p.festi-cart-buttons a.festi-cart-view-cart:hover,
+div.festi-cart-products-content  p.festi-cart-buttons a.festi-cart-checkout:hover,
+div.festi-cart-pop-up-products-content  p.festi-cart-buttons a.festi-cart-checkout:hover,
+div.festi-cart-pop-up-footer span.festi-cart-continue.b-close span.festi-cart-continue-shopping:hover
+{
+    text-decoration: none;
+}
+
+body div.festi-cart-window-content
+{
+    position: absolute;
+    z-index: 999999;
+}
+
+div.festi-cart-horizontal-position-left
+{
+    left: 0;
+}
+
+div.festi-cart-horizontal-position-center
+{
+    display:none;
+}
+
+div.festi-cart-horizontal-position-right
+{
+    right: 0;
+}
+
+div.festi-cart-vertical-position-top
+{
+    top:0;
+}
+
+div.festi-cart-vertical-position-middle
+{
+    display:none;
+}
+
+div.festi-cart-vertical-position-bottom
+{
+    bottom:0;
+}
+
+body div.festi-cart-window-content.festi-cart-fixed-position {
+    position: fixed;
+}
+
+
+

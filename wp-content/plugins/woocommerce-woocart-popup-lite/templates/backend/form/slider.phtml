@@ -1,0 +1,28 @@
+<?php
+$class = (isset($item['class'])) ? $item['class'] : '';
+
+$data = (isset($item['event'])) ? ' data-event="'.$item['event'].'"' : '';
+if (empty($currentValue)) {
+    $currentValue = 0;
+}
+
+?>
+<input value="<?php echo $currentValue; ?>" class="<?php echo $class ;?>"  type="number" <?php echo $data; ?> name="<?php echo $ident; ?>" />
+
+<div class="festi-cart-slider"  id="festi-cart-slider-<?php echo $ident; ?>"></div>
+
+
+<script type="text/javascript">
+jQuery( document ).ready(function() 
+{
+    jQuery("#festi-cart-slider-<?php echo $ident; ?>" ).slider({
+            range: "max",
+            min: <?php echo $item['min']; ?>,
+            max: <?php echo $item['max']; ?>,
+            value: <?php echo $currentValue; ?>,
+            slide: function( event, ui ) {
+                jQuery('input[name="<?php echo $ident; ?>"]').val(ui.value);
+            }
+        });
+});
+</script>

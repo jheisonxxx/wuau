@@ -1,0 +1,12 @@
+<?php 
+$class = (isset($item['class'])) ? $item['class'] : '';
+
+?>
+<input  type="number"  class="<?php echo $class ;?>" name="<?php echo $ident; ?>" value ='<?php echo $currentValue; ?>' >
+<span class="festi-cart-add-on">
+    <?php 
+    if(isset($item['lable'])) {
+        echo $item['lable'];
+    } 
+    ?>
+</span>

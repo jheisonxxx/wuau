@@ -1,0 +1,33 @@
+<div class="festi-cart">
+    <ul class="festi-cart-nav festi-cart-nav-tabs">
+    <?php
+    
+    foreach ($this->_menuOptions as $ident => $caption) {
+        $params = array(
+            'tab' => $ident,
+            'delete_custom_icon' => '',
+            'refresh_plugin' => ''
+        );
+        $url = $this->getUrl($params);
+        
+        $selectTab = '';
+        
+        if ($this->hasOptionPageInRequest()) {
+            if ($_GET['tab'] == $ident) {
+                $selectTab = 'class="festi-cart-active"';
+            }
+             
+        } else if ($ident == $this->_defaultMenuOption) {
+            $selectTab = 'class="festi-cart-active"';
+        }
+    ?>   
+        <li  <?php echo $selectTab;?>>
+            <a href="<?php echo $url; ?>" data-toggle="tab">
+                <?php echo __($caption, $this->_languageDomain); ?>
+            </a>
+        </li>
+    <?php
+    }
+    ?>   
+    </ul>
+</div>

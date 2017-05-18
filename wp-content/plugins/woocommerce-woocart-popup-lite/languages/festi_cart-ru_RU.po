@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: festi-woocommerce-cart\n"
+"POT-Creation-Date: 2014-05-28 14:14+0200\n"
+"PO-Revision-Date: 2014-05-28 14:14+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: plugin.php:40
+msgid "WooCommerce not active or not installed."
+msgstr "WooCommerce не активен или не установлен"
+
+# это что значит?
+#: plugin.php:49
+msgid "It looks like GD is not installed."
+msgstr "It looks like GD is not installed."
+
+#  Нужно писать:
+# Festi Woocommerce Cart Plugin: WooCommerce not active or not installed.
+#: plugin.php:139
+msgid ""
+"Festi Cart for Woocommerce Plugin: WooCommerce not active or not installed."
+msgstr ""
+"Festi Woocommerce Cart Плагин: WooCommerce не активен или не установлен"
+
+#: common/FestiPlugin.php:148 common/FestiPlugin.php:164
+#: common/WooCartBackendFestiPlugin.php:511
+#: common/WooCartBackendFestiPlugin.php:533
+#: common/WooCartBackendFestiPlugin.php:817
+#: common/WooCartBackendFestiPlugin.php:829
+#: common/WooCartBackendFestiPlugin.php:891
+msgid "You don't have permission to access: "
+msgstr "У Вас нет прав доступа "
+
+#: common/WooCartBackendFestiPlugin.php:125
+msgid "Festi Cart Settings"
+msgstr "Настройки Festi Cart "
+
+#: common/WooCartBackendFestiPlugin.php:126
+msgid "Festi Cart"
+msgstr "Фести Корзина"
+
+#: common/WooCartBackendFestiPlugin.php:173
+#: common/WooCartBackendFestiPlugin.php:185
+msgid "Settings"
+msgstr "Настройки"
+
+#: common/WooCartBackendFestiPlugin.php:223
+msgid "Cart in Menu"
+msgstr "Корзина в Меню"
+
+#: common/WooCartBackendFestiPlugin.php:225
+msgid "Enable displaying cart in menu"
+msgstr "Включить корзину в меню"
+
+#: common/WooCartBackendFestiPlugin.php:235
+msgid "Displaying in Menu"
+msgstr "Отображение в меню"
+
+#: common/WooCartBackendFestiPlugin.php:237
+msgid "Select where you want to show cart "
+msgstr "Выберите где отображать корзину"
+
+#: common/WooCartBackendFestiPlugin.php:248
+msgid "Position in Menu"
+msgstr "Расположение в меню"
+
+#: common/WooCartBackendFestiPlugin.php:250
+msgid "Select the location of cart in the menu"
+msgstr "Выберите расположение корзины в меню"
+
+#: common/WooCartBackendFestiPlugin.php:255
+#: common/WooCartBackendFestiPlugin.php:402
+msgid "Left"
+msgstr "Слева"
+
+#: common/WooCartBackendFestiPlugin.php:256
+#: common/WooCartBackendFestiPlugin.php:403
+msgid "Right"
+msgstr "Справа"
+
+#: common/WooCartBackendFestiPlugin.php:264
+msgid "Cart Icon"
+msgstr "Иконка корзины"
+
+#: common/WooCartBackendFestiPlugin.php:265
+msgid "Enable cart icon"
+msgstr "Включить иконку корзины"
+
+#: common/WooCartBackendFestiPlugin.php:273
+msgid "Icons"
+msgstr "Иконки"
+
+#: common/WooCartBackendFestiPlugin.php:300
+msgid "Width for Сustom Icon"
+msgstr "Ширина для загруженной иконки"
+
+#: common/WooCartBackendFestiPlugin.php:314
+msgid "Height for Custom Icon"
+msgstr "Высота для загруженной иконки"
+
+#: common/WooCartBackendFestiPlugin.php:327
+msgid "Custom Icon"
+msgstr "Загруженная иконка"
+
+#: common/WooCartBackendFestiPlugin.php:329
+msgid "Upload your own cart image"
+msgstr "Загрузить свою иконку"
+
+#: common/WooCartBackendFestiPlugin.php:339
+msgid "Title for Cart"
+msgstr "Название корзины"
+
+#: common/WooCartBackendFestiPlugin.php:341
+msgid "Change title for your cart"
+msgstr "Изменить название корзины"
+
+#: common/WooCartBackendFestiPlugin.php:351
+msgid "Dropdown Product List"
+msgstr "Выпадающий список товаров"
+
+#: common/WooCartBackendFestiPlugin.php:355
+msgid "Select action to show dropdown product list"
+msgstr "Выбрать действие для вызова выпадающего списка товаров"
+
+#: common/WooCartBackendFestiPlugin.php:359
+msgid "Disable"
+msgstr "Отключен"
+
+#: common/WooCartBackendFestiPlugin.php:360
+msgid "On Hover"
+msgstr "При наведении курсова"
+
+#: common/WooCartBackendFestiPlugin.php:361
+msgid "On Click"
+msgstr "При клике"
+
+#: common/WooCartBackendFestiPlugin.php:371
+msgid "Border for Dropdown Product List"
+msgstr "Цвет бордера для выпадающего списка"
+
+#: common/WooCartBackendFestiPlugin.php:381
+msgid "Product Quantity"
+msgstr "Количество продуктов"
+
+#: common/WooCartBackendFestiPlugin.php:383
+msgid "Enable total products amount in cart"
+msgstr "Включить отображение общего количества товаров"
+
+#: common/WooCartBackendFestiPlugin.php:394
+msgid "Product Quantity Position"
+msgstr "Расположение количества товаров в корзине"
+
+#: common/WooCartBackendFestiPlugin.php:398
+msgid "Change position number the product quantity near cart"
+msgstr "Изменить расположение количества товара возле корзины"
+
+#: common/WooCartBackendFestiPlugin.php:412
+msgid "Font Size"
+msgstr "Размер Шрифта"
+
+#: common/WooCartBackendFestiPlugin.php:415
+msgid "Change font size for number of products in cart and the title of cart"
+msgstr "Изменить размер шрифта для количества товаров и названия корзины"
+
+#: common/WooCartBackendFestiPlugin.php:427
+msgid "Font Color"
+msgstr "Цвет Шрифта"
+
+#: common/WooCartBackendFestiPlugin.php:429
+msgid "Change the Color for Item Count and Cart title"
+msgstr "Изменить цвет для количеств товаров и названия корзины"
+
+#: common/WooCartBackendFestiPlugin.php:496
+msgid "The catalog is not detected files that come bundled with the plugin."
+msgstr ""
+"Каталог не обнаружил файлы, которые поставляются в комплекте с плагином."
+
+#: common/WooCartBackendFestiPlugin.php:501
+msgid "Directory: "
+msgstr "Каталог:"
+
+# Icon successfully removed
+#: common/WooCartBackendFestiPlugin.php:723
+msgid "Success custom icon remove"
+msgstr "Иконка успешно удалена"
+
+# Settings updated successfully
+#: common/WooCartBackendFestiPlugin.php:735
+msgid "Success update settings"
+msgstr "Настройки успешно изменены"
+
+#: common/WooCartBackendFestiPlugin.php:880
+msgid "Wrong Image Format"
+msgstr "Неверный формат изображения"
+
+#: common/WooCartFestiWidget.php:15 common/WooCartFestiWidget.php:18
+msgid "Festi Woocommerce Cart"
+msgstr "Festi Woocommerce Cart"
+
+#: common/WooCartFestiWidget.php:29
+msgid "Title"
+msgstr "Заголовок"
+
+#: common/WooCartFestiWidget.php:35
+msgid "Hide if cart is empty"
+msgstr "Скрыть если корзина пуста"
+
+#: templates/backend/settings_page.phtml:25
+msgid "Save"
+msgstr "Сохранить"
+
+#: templates/backend/form/input_file.phtml:25
+msgid "Delete Icon"
+msgstr "Удалить иконку"
+
+#: templates/frontend/products_list.phtml:50
+msgid "No products in the cart."
+msgstr "В корзине нет продуктов."
+
+#: templates/frontend/products_list.phtml:67
+msgid "Subtotal"
+msgstr "Всего"
+
+#: templates/frontend/products_list.phtml:69
+msgid "View Cart"
+msgstr "Корзина"
+
+#: templates/frontend/products_list.phtml:70
+msgid "Checkout"
+msgstr "Оформить"

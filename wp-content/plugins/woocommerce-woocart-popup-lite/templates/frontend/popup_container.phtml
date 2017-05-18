@@ -1,0 +1,13 @@
+<div id="festi-cart-pop-up-bg"></div>
+<div style="display:none; " class="festi-cart-pop-up-content" id="festi-cart-pop-up-content">
+    <span class="festi-cart-closed b-close"><span class="festi-cart-closed-button">&times;</span></span>
+    <div class="festi-cart-pop-up-body">
+        <div class="festi-cart-pop-up-header">
+            <span class="festi-cart-added-to-cart-msg"><?php echo $settings['popupHeaderText'];?></span>
+        </div>
+        <?php echo $content;?>
+        <div class="festi-cart-pop-up-footer">
+            <span class="festi-cart-continue b-close"><span class="festi-cart-continue-shopping"><?php echo $settings['popupContinueButtonText'];?></span></span>
+        </div>
+    </div>
+</div>

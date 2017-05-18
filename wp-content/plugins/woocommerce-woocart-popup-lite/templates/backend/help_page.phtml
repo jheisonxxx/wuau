@@ -1,0 +1,79 @@
+<?php
+$imagesFolder = 'manual/';
+?>
+
+<div class="festi-cart">
+    <div class="festi-cart-help">
+        <h3 class="festi-cart-section-header" id="how-to-change-Folder-Permissions">How to change Folder Permissions?</h3>
+        <div class="festi-cart-section-content">
+            <img style="max-width: 100%;" src="<?php echo $this->getPluginImagesUrl($imagesFolder.'screen_errors.png')?>" />
+            <p>
+                This issue is most commonly caused by wrong file permissions.
+            </p>
+            <p>
+                Your uploads directory should have correct file permissions 
+                otherwise WordPress will not be able to store your files in it 
+                or sometimes may not even display files from the upload 
+                directory.
+            </p> 
+            <p>
+                To set correct file permissions for your uploads directory, 
+                you would need a FTP client, like Filezilla.
+            </p>
+            
+            <p>
+                If you see warning like this you need connect to your website 
+                using the FTP client and then go to 
+                /wp-content/plugins/woocommerce-woocartpro/directory. 
+            </p>
+            <p>
+                There you will see /plugins/woocommerce-woocartpro/.  
+                Right click on the uploads directory and select file permissions.
+            </p>
+            <img style="max-width: 100%;" src="<?php echo $this->getPluginImagesUrl($imagesFolder.'screen_permissions.png')?>" />
+            <p>
+                A new dialog box for file permissions will open. At first you 
+                will need to set file permissions for uploads directory itself 
+                and all the sub directories inside it to 777.
+            </p>
+            <p>
+                To do that, enter 
+                777 in the numberic value box, and then check the box next 
+                toRecurse into subdirectories.
+            </p>
+            <p>
+                Lastly, you need to click on 
+                'Apply to directories only' radio button.
+            </p>
+            <p>
+                Click on the OK button 
+                to apply these changes. Filezilla will now start applying file 
+                permissions to the directories.
+            </p>
+
+            <img style="max-width: 100%;" src="<?php echo $this->getPluginImagesUrl($imagesFolder.'screen_atribbutes.png')?>" />
+            <p>
+                Filezilla will now set the file permissions for all the 
+                directories Once it is done, you can go back to your WooCart Pro 
+                Settings and click on Refresh plagin button.
+            </p>
+            <img style="max-width: 100%;" src="<?php echo $this->getPluginImagesUrl($imagesFolder.'screen_refresh.png')?>" />
+            <p>
+               After refreshing you will see success message:
+            </p>
+            <img style="max-width: 100%;" src="<?php echo $this->getPluginImagesUrl($imagesFolder.'screen_success_update.png')?>" />
+
+        </div>
+        
+        <h3 class="section-header">I have another question...</h3>
+        <div class="section-content">
+            <p>
+                If you need support  or  you have a question or suggestion - 
+                leave a message for our support team.
+            </p>
+             <p>
+                <a href="mailto:support@festi.io">support@festi.io</a>
+            </p>
+        </div>
+    </div>
+</div>
